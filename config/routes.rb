@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root "home#index"
+  resources :commissioners
   resources :leagues
   resources :managers
-  resources :commissioners
   resources :dues
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
