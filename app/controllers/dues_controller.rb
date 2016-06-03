@@ -1,0 +1,2 @@
+class DueController < ApplicationController
+end

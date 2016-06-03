@@ -1,0 +1,2 @@
+class CommissionersController < ApplicationController
+end
