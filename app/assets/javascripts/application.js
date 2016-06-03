@@ -12,5 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require wow.js
+//= require gmaps.js
+//= require jquery.mb.YTPlayer.min.js
+//= require contact.js
+//= require jquery.simple-text-rotator.min
+//= require jqBootstrapValidation
+//= require isotope.pkgd.min
+//= require imagesloaded.pkgd
+//= require jquery.flexslider-min
+//= require jquery.magnific-popup.min
+//= require jquery.fitvids
+//= require smoothscroll
+//= require wow.min
+//= require contact
+//= require custom
 //= require bootstrap-sprockets
 //= require_tree .
