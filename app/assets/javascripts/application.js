@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require wow.js
-//= require gmaps.js
 //= require jquery.mb.YTPlayer.min.js
 //= require contact.js
 //= require jquery.simple-text-rotator.min
