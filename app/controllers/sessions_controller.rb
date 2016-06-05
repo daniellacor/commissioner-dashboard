@@ -5,13 +5,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    commissioner = Commissioner.find(email: params[:email])
+    commissioner = Commissioner.find_by(email: params[:email])
 
     if commissioner && commissioner.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to "/"
+      session[:user_id] = commissioner.id
+      redirect_to commissioner_path(commissioner)
     else
-      redirect_to '/login'
+      redirect_to '/'
     end
   end
 

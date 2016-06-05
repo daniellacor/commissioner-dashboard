@@ -2,3 +2,7 @@
 Project: Semantic
 Place here your custom CSS styles
 ------------------------------------------------------------------ */
+input {
+background-color: transparent;
+
+}

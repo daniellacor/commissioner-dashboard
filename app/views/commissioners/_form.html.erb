@@ -2,7 +2,7 @@
   <div class="caption-content">
     <div class="hs-title-size-4 font-alt m-b-30">
 
-<%= form_for :commissioner do |f| %>
+<%= form_for (@commissioner) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %><br>
   <%= f.label :password %>
@@ -16,6 +16,7 @@
 
   <%= f.submit 'Create', class: "btn btn-border-d btn-circle"  %>
 <% end %>
+<a class="btn btn-border-d btn-circle btn-lg" id="BackSU" href="#"></i>Back</a>
 </div>
 </div>
 </div>

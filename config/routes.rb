@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :dues
 
   get '/sign-up' => 'sessions#new'
-  post '/log-in' => 'sessions#create'
+  post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
 
