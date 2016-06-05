@@ -2,7 +2,7 @@
 <div class="wrapper">
 
   <!-- HOME -->
-  <%= render "leagues/dashboard_jumbotron" %>
+  <%= render partial: "leagues/dashboard_jumbotron", locals: {league: @league}%>
   <!-- /HOME -->
 		<!-- PORTFOLIO -->
 		<section class="module-small p-t-20 p-b-60" id="League_Create_Form">
