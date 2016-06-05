@@ -15,7 +15,7 @@
        <hr class="divider-w m-t-10 m-b-20">
 
 
-        <%= form_for (@due) do |f| %>
+        <%= form_for [@league, @due] do |f| %>
           <%= f.label :amount, 'Set Buy-In: ' %>
           <%= f.text_field :amount %><br><br>
 

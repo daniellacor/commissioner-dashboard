@@ -7,18 +7,18 @@ class DuesController < ApplicationController
 
   def create
     @due = Due.new(due_params)
-    if due_params["account"].blank?
-      flash[:danger] = "You need to specify your total league dues"
-      redirect_to :back
-    else
-      @due.commissioner_id = current_user.id
-      @due.league_id = current_user.league_id
-      #   @commissioner.managers.each do |manager|
-      #     manager.due.id = current_user.league_id
-      #   end
-      @due.save
-      redirect_to league_due_path(@due)
+    @due.commissioner_id = current_user.id
+    @league = current_user.leagues.first
+    @due.league_id = @league.id
+
+    debugger
+
+    @league.managers.each do |manager|
+      @due.manager_id = manager.id
     end
+
+    @due.save
+    redirect_to league_due_path(@league, @due)
   end
 
   def edit
@@ -29,6 +29,7 @@ class DuesController < ApplicationController
   end
 
   def show
+    @due = Due.find(params[:id])
   end
 
   def destroy
