@@ -2,7 +2,8 @@
 <div class="wrapper">
 
   <!-- HOME -->
-  <%= render "leagues/dashboard_jumbotron" %>
+  <%= render partial: "leagues/dashboard_jumbotron", locals: {league: @league} %>
+
   <!-- /HOME -->
 		<!-- PORTFOLIO -->
 		<section class="module-small p-t-20 p-b-60">
@@ -30,17 +31,17 @@
 
 					<!-- PORTFOLIO ITEM -->
 					<li class="work-item illustration webdesign">
-						<a href="portfolio-single-1.html">
+            <%= link_to new_manager_path do %>
 							<div class="work-image">
 								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
 							</div>
 							<div class="work-caption">
-								<h3 class="work-title font-alt">Placeholder</h3>
+								<h3 class="work-title font-alt">Add Managers</h3>
 								<div class="work-descr font-inc">
-									Placeholder
+									Add Managers to this league
 								</div>
 							</div>
-						</a>
+						<% end %>
 					</li>
 					<!-- /PORTFOLIO ITEM -->
 

@@ -15,6 +15,10 @@ class LeaguesController < ApplicationController
     end
   end
 
+  def show
+    @league = current_user.leagues.first
+  end
+
 private
 
   def league_params
