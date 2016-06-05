@@ -16,7 +16,7 @@ class LeaguesController < ApplicationController
   end
 
   def show
-    @league = League.find(params[:id])
+    @league = current_user.leagues.first
   end
 
 private

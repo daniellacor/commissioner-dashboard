@@ -13,7 +13,7 @@ class CommissionersController < ApplicationController
     if @commissioner.save
       session[:user_id] = @commissioner.id
       flash[:success] = "Welcome #{@commissioner.name}"
-      redirect_to new_league_path(@commissioner)
+      redirect_to new_league_path
     else
       string = ""
       @commissioner.errors.full_messages.each {|error| string << "#{error}.<br>"}
