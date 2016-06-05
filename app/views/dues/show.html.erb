@@ -1,0 +1,23 @@
+<h1>League Finances</h1>
+
+<h2>Total Payout:
+  <% @total = 0  %>
+  <% @league.managers.dues do |due| %>
+    @total += due.amount
+  <% end  %>
+  <%= @total %>
+</h2>
+
+<h2>Total Collected:
+  <% @total = 0  %>
+  <% @league.managers.dues do |due| %>
+    @total += due.amount
+  <% end  %>
+  <%= @total %>
+</h2>
+
+<h2>Manager Dues: <% @league.managers.dues do |due| %>
+<% due.manager.name %> : <%= due.amount %>
+
+<% end  %>
+</h2>
