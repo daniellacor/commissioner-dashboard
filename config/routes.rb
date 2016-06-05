@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   root "home#index"
   resources :commissioners
-  resources :leagues
-  resources :managers
-  resources :dues
+  resources :leagues do
+    resources :dues
+    resources :managers
+  end
+
 
   get '/sign-up' => 'sessions#new'
   post '/login' => 'sessions#create'
