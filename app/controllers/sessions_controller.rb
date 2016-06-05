@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if commissioner && commissioner.authenticate(params[:password])
       session[:user_id] = commissioner.id
-      redirect_to commissioner_path(commissioner)
+      redirect_to league_path(commissioner.leagues.first)
     else
       redirect_to '/'
     end

@@ -1,0 +1,19 @@
+<h1>League Dues</h1>
+
+<h2>Per manager:</h2>
+
+<%= form_for (@commissioner) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :password %>
+  <%= f.text_field :password %><br>
+  <%= f.label :password_confirmation %>
+  <%= f.text_field :password_confirmation %><br>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %><br>
+
+  <%= f.submit 'Create', class: "btn btn-g btn-circle btn-lg"  %>
+  
+<%= form_tag
