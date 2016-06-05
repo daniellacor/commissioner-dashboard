@@ -1,7 +1,26 @@
 <div class="hs-caption container" id="Create_Commish" style="display: none;">
   <div class="caption-content">
     <div class="hs-title-size-4 font-alt m-b-30">
+      <div class="row">
+      <h4 class="font-alt m-t-0 m-b-0">Sign-Up</h4>
+      <hr class="divider-w m-t-10 m-b-20">
 
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="NAME">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="EMAIL">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="PHONE NUMBER">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="PASSWORD">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="PASSWORD CONFIRMATION">
+      </div>
+<div class="form-control input-lg">
 <%= form_for (@commissioner) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %><br>
@@ -17,6 +36,8 @@
   <%= f.submit 'Create', class: "btn btn-g btn-circle btn-lg"  %>
 <% end %>
 <a class="btn btn-g btn-circle btn-lg" id="BackSU" href="#"></i>Back</a>
+</div>
+</div>
 </div>
 </div>
 </div>
