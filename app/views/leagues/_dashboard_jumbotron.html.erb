@@ -11,7 +11,11 @@
           <h1 class="module-title font-alt align-center"><%= current_user.name.upcase %>'s DASHBOARD </h1>
 
           <div class="module-subtitle font-inc align-center">
-            Current League: <%= league.name %>
+            Current League: <% if current_user.leagues.first %>
+            <%= league.name %>
+            <% else %>
+            None
+          <% end %>
           </div>
 
         </div>
