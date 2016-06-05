@@ -1,28 +1,94 @@
-<div class="hs-caption container" id="Create_Commish" style="display: none;">
-  <div class="caption-content">
-    <div class="hs-title-size-4 font-alt m-b-30">
+<!-- WRAPPER -->
+<div class="wrapper">
+
+  <!-- HOME -->
+  <section class="module module-header bg-dark bg-dark-50" data-background="http://images.123hdwallpapers.com/20150517/sports-wallpaper-american-football-1024x768.jpg">
+
+    <div class="container">
+
+      <!-- MODULE TITLE -->
       <div class="row">
-      <h4 class="font-alt m-t-0 m-b-0">Edit Account</h4>
-      <hr class="divider-w m-t-10 m-b-20">
+
+        <div class="col-sm-6 col-sm-offset-3">
+
+          <h1 class="module-title font-alt align-center"> EDIT ACCOUNT PAGE </h1>
+          <!-- QUOTE OF THE DAY
+
+          <div class="module-subtitle font-inc align-center">
+            QUOTE OF THE DAY
+          </div> -->
+
+        </div>
+
+      </div>
+      <!-- /MODULE TITLE -->
+
+    </div>
+
+  </section >
+  <!-- /HOME -->
+
+  <!-- PORTFOLIO -->
+  <section class="module-small p-t-20 p-b-60">
+
+    <div class="container">
+
+      <!-- PORTFOLIO FILTER -->
+      <div class="row">
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+      <!-- /PORTFOLIO FILTER -->
+
+    </div>
+
+    <div class="module-title font-alt align-center">
+      <%= form_for (@commissioner) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %><br>
+        <%= f.label :password %>
+        <%= f.password_field :password %><br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %><br>
+        <%= f.label :email %>
+        <%= f.text_field :email %><br>
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number %><br>
+        <%= f.submit 'Update', class: "btn btn-g btn-circle btn-lg"  %>
+      <% end %>
+    <div><br>
+
+  </section>
+  <!-- /PORTFOLIO -->
+
+  <!-- DIVIDER -->
+  <hr class="divider-w">
+  <!-- /DIVIDER -->
 
 
-<%= form_for (@commissioner) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %><br>
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number %><br>
+  <!-- FOOTER -->
+  <footer class="footer">
 
-  <%= f.submit 'Create', class: "btn btn-g btn-circle btn-lg"  %>
-<% end %>
-<a class="btn btn-g btn-circle btn-lg" id="BackSU" href="#"></i>Back</a>
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-12 text-center">
+          <p class="copyright font-inc m-b-0">Made with ♡ at the Flatiron School, New York, NY</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <!-- /FOOTER -->
+
 </div>
-</div>
-</div>
-</div>
+<!-- /WRAPPER -->
+
+<!-- Scroll-up -->
+<div class="scroll-up">
+  <a href="#totop"><i class="fa fa-angle-double-up"></i></a>
 </div>
