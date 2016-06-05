@@ -11,7 +11,7 @@
 
         <div class="col-sm-6 col-sm-offset-3">
 
-          <h1 class="module-title font-alt align-center"><%= current_user.name.upcase %>'s DASHBOARD </h1>
+          <h1 class="module-title font-alt align-center"><%= current_user.name.upcase %>'s ACCOUNT PAGE </h1>
           <!-- QUOTE OF THE DAY
 
           <div class="module-subtitle font-inc align-center">
@@ -37,120 +37,23 @@
       <div class="row">
         <div class="col-sm-12">
 
-          <ul id="filters" class="filter font-inc hidden-xs">
-            <li><a href="#" data-filter="*" class="current wow fadeInUp">All</a></li>
-            <li><a href="#" data-filter=".illustration" class="wow fadeInUp" data-wow-delay="0.2s">PLACEHOLDER</a></li>
-            <li><a href="#" data-filter=".marketing" class="wow fadeInUp" data-wow-delay="0.4s">PLACEHOLDER</a></li>
-            <li><a href="#" data-filter=".photography" class="wow fadeInUp" data-wow-delay="0.6s">PLACEHOLDER</a></li>
-            <li><a href="#" data-filter=".webdesign" class="wow fadeInUp" data-wow-delay="0.8s">PLACEHOLDER</a></li>
-          </ul>
-
         </div>
       </div>
       <!-- /PORTFOLIO FILTER -->
 
     </div>
 
+    <div class="module-title font-alt align-center">
+        <%= current_user.email %><br>
+        <%= current_user.phone_number %><br>
+    <div><br>
+    <div class="btn btn-g btn-circle btn-lg">
+        <%= link_to "EDIT ACCOUNT", edit_commissioner_path(@commissioner) %>
+    </div>
+
     <!-- PORTFOLIO LIST -->
-    <ul id="works-grid" class="works-grid works-grid-gut works-grid-2 works-hover-w">
 
-      <!-- PORTFOLIO ITEM -->
-      <li class="work-item illustration webdesign">
-        <a href="portfolio-single-1.html">
-          <div class="work-image">
-            <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
-          </div>
-          <div class="work-caption">
-            <h3 class="work-title font-alt">League Dues</h3>
-            <div class="work-descr font-inc">
-              See who's paid, and shame those that haven't yet!
-            </div>
-          </div>
-        </a>
-      </li>
-      <!-- /PORTFOLIO ITEM -->
 
-      <!-- PORTFOLIO ITEM -->
-      <li class="work-item marketing photography">
-        <a href="portfolio-single-1.html">
-          <div class="work-image">
-            <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
-          </div>
-          <div class="work-caption">
-            <h3 class="work-title font-alt">Email League</h3>
-            <div class="work-descr font-inc">
-              Write a commissioner email to everyone in your league
-            </div>
-          </div>
-        </a>
-      </li>
-      <!-- /PORTFOLIO ITEM -->
-
-      <!-- PORTFOLIO ITEM -->
-      <li class="work-item illustration photography">
-        <a href="portfolio-single-1.html">
-          <div class="work-image">
-            <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
-          </div>
-          <div class="work-caption">
-            <h3 class="work-title font-alt">Poll</h3>
-            <div class="work-descr font-inc">
-              Poll your whole league and view the results
-            </div>
-          </div>
-        </a>
-      </li>
-      <!-- /PORTFOLIO ITEM -->
-
-      <!-- PORTFOLIO ITEM -->
-      <li class="work-item marketing photography">
-        <a href="portfolio-single-1.html">
-          <div class="work-image">
-            <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
-          </div>
-          <div class="work-caption">
-            <h3 class="work-title font-alt">Draft</h3>
-            <div class="work-descr font-inc">
-              Schedule your draft, and send reminders
-            </div>
-          </div>
-        </a>
-      </li>
-      <!-- /PORTFOLIO ITEM -->
-
-      <!-- PORTFOLIO ITEM -->
-      <li class="work-item illustration webdesign">
-        <a href="portfolio-single-1.html">
-          <div class="work-image">
-            <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
-          </div>
-          <div class="work-caption">
-            <h3 class="work-title font-alt">Viewing Parties</h3>
-            <div class="work-descr font-inc">
-              Organize viewing parties
-            </div>
-          </div>
-        </a>
-      </li>
-      <!-- /PORTFOLIO ITEM -->
-
-      <!-- PORTFOLIO ITEM -->
-      <li class="work-item marketing webdesign">
-        <a href="portfolio-single-1.html">
-          <div class="work-image">
-            <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
-          </div>
-          <div class="work-caption">
-            <h3 class="work-title font-alt">Something else</h3>
-            <div class="work-descr font-inc">
-              Something here
-            </div>
-          </div>
-        </a>
-      </li>
-      <!-- /PORTFOLIO ITEM -->
-
-    </ul>
     <!-- /PORTFOLIO LIST -->
 
   </section>
