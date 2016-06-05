@@ -28,6 +28,7 @@
             </ul>
           </li>
 
+          <% if signed_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown" data-toggle="dropdown">Tools</a>
             <ul class="dropdown-menu" role="menu">
@@ -43,7 +44,8 @@
             <a href="#" class="dropdown" data-toggle="dropdown">Profile</a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="/commissioners/<%=current_user.id%>"> <i class="account"></i>Account</a></li>
-              <li><a href=""><i class="payout"></i>Logout</a></li>
+              <li><a href="/logout"><i class="payout"></i>Logout</a></li>
+              <% end %>
             </ul>
           </li>
 
