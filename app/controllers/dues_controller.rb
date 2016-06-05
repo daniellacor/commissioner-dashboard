@@ -2,6 +2,7 @@ class DuesController < ApplicationController
 
   def new
     @due = Due.new
+    @league = current_user.leagues.first
   end
 
   def create
@@ -16,7 +17,7 @@ class DuesController < ApplicationController
       #     manager.due.id = current_user.league_id
       #   end
       @due.save
-      redirect_to due_path(@due)
+      redirect_to league_due_path(@due)
     end
   end
 
