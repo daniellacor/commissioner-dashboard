@@ -5,11 +5,9 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+
         </button>
-        <a class="navbar-brand" href="index.html">CD</a>
+        <%= link_to "CD", root_path, class: "navbar-brand" %>
       </div>
 
       <div class="collapse navbar-collapse" id="custom-collapse">
@@ -17,7 +15,7 @@
         <ul class="nav navbar-nav navbar-right">
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+            <a href="#" class="dropdown" data-toggle="dropdown">Home</a>
             <ul class="dropdown-menu">
               <li><a href="index.html">Image Parallax 1</a></li>
               <li><a href="index-2.html">Image Parallax 2</a></li>
@@ -31,7 +29,7 @@
           </li>
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools</a>
+            <a href="#" class="dropdown" data-toggle="dropdown">Tools</a>
             <ul class="dropdown-menu" role="menu">
               <li><a href=""><i class="league"></i>League</a></li>
               <li><a href=""><i class="payout"></i>Payout</a></li>
@@ -41,8 +39,14 @@
             </ul>
           </li>
 
-          <li> <a href="sign-up">Sign Up</a> </li>
-          <li> <a href="sign-up">Sign In</a> </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown" data-toggle="dropdown">Profile</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href=""><i class="league"></i>Settings</a></li>
+              <li><a href=""><i class="payout"></i>Something</a></li>
+              <li><a href=""><i class="payout"></i>Logut</a></li>
+            </ul>
+          </li>
 
 
         </ul>

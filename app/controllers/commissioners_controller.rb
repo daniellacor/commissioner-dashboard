@@ -9,9 +9,8 @@ class CommissionersController < ApplicationController
   end
 
   def create
-    @commissioner = Commissioner.find(params[:id])
     @commissioner = Commissioner.create(commissioner_params)
-    if commissioner.save
+    if @commissioner.save
       session[:user_id] = @commissioner.id
       flash[:success] = "Welcome #{@commissioner.name}"
       redirect_to commissioner_path(@commissioner)

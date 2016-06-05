@@ -2,3 +2,7 @@
 Project: Semantic
 Place here your custom CSS styles
 ------------------------------------------------------------------ */
+.navbar-brand {
+  border-radius: 10%;
+  border: 1.5px solid;
+}
