@@ -32,7 +32,7 @@
 
            <div class="work-details">
              <h3 class="work-details-title font-alt">Add Manager</h3>
-             <%= form_for @manager do |f| %>
+             <%= form_for [@league, @manager] do |f| %>
               <div class="form-group">
              		 <%= f.text_field :name, class: "form-control input-lg", placeholder: "Name" %>
               </div>
