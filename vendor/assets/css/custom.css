@@ -6,3 +6,7 @@ Place here your custom CSS styles
   border-radius: 10%;
   border: 1.5px solid;
 }
+
+input {
+  background-color: transparent;
+}
