@@ -21,7 +21,6 @@
              <h1>Manage Payments</h1>
                <% @due.league.managers.each do |manager|  %>
                  <h3 class="manager-paid"><%= manager.name %>
-                   <% debugger  %>
                    <% if manager.due.paid %>paid
                    <% else %> <span id="due-amt">$<%= @due.amount %></span><button class: "btn btn-g btn-circle btn-sm" id="paid-btn">paid</button>
                    <% end %><br>
