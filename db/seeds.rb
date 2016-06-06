@@ -29,5 +29,5 @@ second_manager = Manager.create(name: "George", email: "george@george.com", phon
 third_manager = Manager.create(name: "Jim", email: "jim@jim.com", phone_number: "111-111-1111", league_id: 1)
 
 another_manager = Manager.create(name: "Lauren", email: "lauren@lauren.com", phone_number: "333-333-3333", league_id: 2)
-other_manager = Manager.create(name: "Veronica", email: "lauren@lauren.com", phone_number: "222-222-2222", league_id: 2)
-again_manager = Manager.create(name: "Maureen", email: "lauren@lauren.com", phone_number: "111-111-1111", league_id: 2)
+other_manager = Manager.create(name: "Veronica", email: "veronica@veronica.com", phone_number: "222-222-2222", league_id: 2)
+again_manager = Manager.create(name: "Maureen", email: "maureen@maureen.com", phone_number: "111-111-1111", league_id: 2)
