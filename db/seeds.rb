@@ -13,12 +13,12 @@ daniella = Commissioner.create(name: "Daniella", email: "d@flatiron.com", passwo
 j_league = League.create(name: "J's League", commissioner_id: 1)
 d_league = League.create(name: "D's League", commissioner_id: 2)
 
-j_due = Due.create(commissioner_id: 1, league_id: 1)
-d_due = Due.create(commissioner_id: 2, league_id: 2)
+j_due = Due.create(commissioner_id: 1, league_id: 1, amount: 25)
+d_due = Due.create(commissioner_id: 2, league_id: 2, amount: 25)
 
-first_due = Due.create(manager_id: 1, league_id: 1)
-second_due = Due.create(manager_id: 2, league_id: 1)
-third_due = Due.create(manager_id: 3, league_id: 1)
+first_due = Due.create(manager_id: 1, league_id: 1, amount: 25)
+second_due = Due.create(manager_id: 2, league_id: 1, amount: 25)
+third_due = Due.create(manager_id: 3, league_id: 1, amount: 25)
 
 another_due = Due.create(manager_id: 4, league_id: 2)
 other_due = Due.create(manager_id: 5, league_id: 2)
