@@ -14,7 +14,7 @@
 
              <% total = 0  %>
              <h3>Total Collected: $
-                  <% @due.league.managers.each do |manager|  %>
+                  <% league.managers.each do |manager|  %>
                     <% total += manager.due.amount  %>
                   <% end  %>
                   <%= total %>
