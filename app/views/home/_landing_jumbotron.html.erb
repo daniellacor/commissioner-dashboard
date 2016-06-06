@@ -9,9 +9,12 @@ Welcome to Commissioner Dashboard
 EST 2016
 <div>
 <br>
-<a class="btn btn-g btn-circle btn-lg" id="Sign-Up" href="#"></i>Sign-Up</a>
-<a class="btn btn-g btn-circle btn-lg" id="Log-In" href="#"></i>Log-In</a>
-
+  <% if signed_in?  %>
+    <a class="btn btn-g btn-circle btn-lg" id="Dashboard" href="leagues/<%=current_user.id%>"></i>Dashboard</a>
+  <% else  %>
+    <a class="btn btn-g btn-circle btn-lg" id="Sign-Up" href="#"></i>Sign-Up</a>
+    <a class="btn btn-g btn-circle btn-lg" id="Log-In" href="#"></i>Log-In</a>
+  <% end %>
 </div>
 </div>
 </div>
