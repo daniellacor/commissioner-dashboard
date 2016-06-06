@@ -45,7 +45,7 @@ class DuesController < ApplicationController
   private
 
   def due_params
-    params.require(:due).permit(:amount, :paids)
+    params.require(:due).permit(:amount)
   end
 
 end

@@ -20,9 +20,9 @@ first_due = Due.create(manager_id: 1, league_id: 1, amount: 25)
 second_due = Due.create(manager_id: 2, league_id: 1, amount: 25)
 third_due = Due.create(manager_id: 3, league_id: 1, amount: 25)
 
-another_due = Due.create(manager_id: 4, league_id: 2)
-other_due = Due.create(manager_id: 5, league_id: 2)
-again_due = Due.create(manager_id: 6, league_id: 2)
+another_due = Due.create(manager_id: 4, league_id: 2, amount: 25)
+other_due = Due.create(manager_id: 5, league_id: 2, amount: 25)
+again_due = Due.create(manager_id: 6, league_id: 2, amount: 25)
 
 first_manager = Manager.create(name: "Bob", email: "bob@bob.com", phone_number: "333-333-3333", league_id: 1)
 second_manager = Manager.create(name: "George", email: "george@george.com", phone_number: "222-222-2222", league_id: 1)
