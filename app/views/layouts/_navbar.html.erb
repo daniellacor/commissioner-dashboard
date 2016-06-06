@@ -7,7 +7,11 @@
           <span class="sr-only">Toggle navigation</span>
 
         </button>
+        <% if signed_in? %>
+          <%= link_to "CD", league_path(current_user.id), class: "navbar-brand" %>
+        <% else %>
           <%= link_to "CD", root_path, class: "navbar-brand" %>
+        <% end %>
       </div>
 
       <div class="collapse navbar-collapse" id="custom-collapse">
@@ -16,16 +20,6 @@
 
           <li class="dropdown">
             <a href="#" class="dropdown" data-toggle="dropdown">Home</a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html">Image Parallax 1</a></li>
-              <li><a href="index-2.html">Image Parallax 2</a></li>
-              <li><a href="index-3.html">Slider Parallax 1</a></li>
-              <li><a href="index-4.html">Slider Parallax 2</a></li>
-              <li><a href="index-5.html">Text rotator 1</a></li>
-              <li><a href="index-6.html">Text rotator 2</a></li>
-              <li><a href="index-7.html">Video background 1</a></li>
-              <li><a href="index-8.html">Video background 2</a></li>
-            </ul>
           </li>
 
 
@@ -34,7 +28,7 @@
             <a href="#" class="dropdown" data-toggle="dropdown">Tools</a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="/leagues/<%=current_user.id%>"><i class="league"></i>League</a></li>
-              <li><a href=""><i class="finances"></i>Finances</a></li>
+              <li><a href="/leagues/<%=current_user.id%>/dues/<%=current_user.id%>"><i class="finances"></i>Finances</a></li>
               <li><a href=""><i class="new"></i>News</a></li>
               <li><a href=""><i class="injury-report"></i>Injury Report</a></li>
 
@@ -46,7 +40,7 @@
             <a href="#" class="dropdown" data-toggle="dropdown">Profile</a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="/commissioners/<%=current_user.id%>"<i class="account"></i>Account</a></li>
-              <li><a href=""><i class="payout"></i>Logout</a></li>
+              <li><a href="/logout"><i class="payout"></i>Logout</a></li>
 
             </ul>
           </li>
