@@ -7,7 +7,11 @@
           <span class="sr-only">Toggle navigation</span>
 
         </button>
-        <%= link_to "CD", root_path, class: "navbar-brand" %>
+        <% if signed_in? %>
+          <%= link_to "CD", root_path, class: "navbar-brand" %>
+        <% else %>
+          <%= link_to "CD", league_path, class: "navbar-brand" %>
+        <% end %>
       </div>
 
       <div class="collapse navbar-collapse" id="custom-collapse">

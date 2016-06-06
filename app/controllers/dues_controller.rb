@@ -11,12 +11,9 @@ class DuesController < ApplicationController
     @league = current_user.leagues.first
     @due.league_id = @league.id
 
-    debugger
-
     @league.managers.each do |manager|
       @due.manager_id = manager.id
     end
-
     @due.save
     redirect_to league_due_path(@league, @due)
   end
