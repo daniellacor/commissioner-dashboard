@@ -1,4 +1,9 @@
 class ManagersController < ApplicationController
+  def index
+    @league = current_user.leagues.first
+    @managers = current_user.leagues.first.managers
+  end
+
   def new
     @league = current_user.leagues.first
     @manager = Manager.new
@@ -11,11 +16,14 @@ class ManagersController < ApplicationController
     redirect_to :back
     else
     @league = League.find_by(id: params[:league_id])
+    end
     @manager.league_id = params[:league_id]
     @manager.save
+    if current_user.due
+    @manager.due = Due.create(amount: current_user.due.amount, manager_id: @manager.id, league_id: @league.id)
+    end
     respond_to do |format|
       format.js
-    end
     end
   end
 

@@ -1,25 +1,30 @@
 class DuesController < ApplicationController
 
+  def index
+    @dues = current_user.leagues.first.dues
+    @managers = current_user.leagues.first.managers
+    @league = current_user.leagues.first
+  end
+
   def new
     @due = Due.new
     @league = current_user.leagues.first
   end
 
   def create
-    @due = Due.new(due_params)
-    @due.commissioner_id = current_user.id
-    @due.league_id = params[:league_id]
-    @due.save
+    commish_due = Due.new(due_params)
+    commish_due.commissioner_id = current_user.id
+    commish_due.league_id = params[:league_id]
+    commish_due.save
 
     @league = League.find(params[:league_id])
     @league.managers.each do |manager|
-      @due = Due.new(due_params)
-      @due.manager_id = manager.id
-      @due.league_id = params[:league_id]
-      @due.save
+      due = Due.new(due_params)
+      due.manager_id = manager.id
+      due.league_id = params[:league_id]
+      due.save
     end
-
-    redirect_to league_due_path(@league, @due)
+    redirect_to league_dues_path(@league)
   end
 
   def edit

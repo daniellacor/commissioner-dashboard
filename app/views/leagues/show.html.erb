@@ -32,7 +32,7 @@
 
 					<!-- PORTFOLIO ITEM -->
 					<li class="work-item manager">
-            <%= link_to new_league_manager_path(@league) do %>
+            <%= link_to league_managers_path(@league) do %>
 							<div class="work-image">
 								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
 							</div>
@@ -128,7 +128,7 @@
 
 					<!-- PORTFOLIO ITEM -->
 					<li class="work-item manager">
-						<a href="portfolio-single-1.html">
+						<%= link_to new_league_manager_path(@league) do %>
 							<div class="work-image">
 								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
 							</div>
@@ -138,23 +138,7 @@
 									Placeholder
 								</div>
 							</div>
-						</a>
-					</li>
-					<!-- /PORTFOLIO ITEM -->
-
-					<!-- PORTFOLIO ITEM -->
-					<li class="work-item manager">
-						<a href="portfolio-single-1.html">
-							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
-							</div>
-							<div class="work-caption">
-								<h3 class="work-title font-alt">Edit Managers</h3>
-								<div class="work-descr font-inc">
-									Placeholder
-								</div>
-							</div>
-						</a>
+						<% end %>
 					</li>
 					<!-- /PORTFOLIO ITEM -->
 
