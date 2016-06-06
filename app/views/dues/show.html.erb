@@ -10,21 +10,19 @@
            <div class="work-details">
              <h1>League Finances</h1>
 
-             <h3>League Pot: <%=  %></h3>
+             <h3>League Pot: <%= @due.amount * @due.league.managers.length %></h3>
 
              <% total = 0  %>
              <h3>Total Collected: $
-                  <% @due.league.managers.each do |manager|  %>
-                    <% total += manager.due.amount  %>
-                  <% end  %>
-                  <%= total %>
+                
              </h3>
 
              <h3>Buy In: $<%= @due.amount %></h3>
 
              <h1>League</h1>
-
-
+               <% @due.league.managers.each do |manager|  %>
+                 <h2><%= manager.name %><br><h2>
+               <% end  %>
            </div>
        </div>
      </div>
