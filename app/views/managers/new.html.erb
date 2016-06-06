@@ -21,7 +21,9 @@
                <li class="font-inc" id="no-manager"><strong>No managers</strong></li>
                <% else %>
                <% @league.managers.each do |manager| %>
+               <%= link_to league_manager_path(@league, manager) do %>
                <li class="font-inc"><strong><%= manager.name %>: </strong><%= manager.email %></li>
+               <% end %>
                 <% end %>
               <% end %>
              </ul>

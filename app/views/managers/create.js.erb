@@ -3,7 +3,7 @@ if ($("#no-manager").text() == "No managers") {
   $("ul#managers-list").append("<li class='font-inc'><strong>" + $("input#manager_name").val() + ": </strong>" + $("input#manager_email").val() + "</li>")
 }
 else {
-  $("ul#managers-list").append("<li class='font-inc'><strong>" + $("input#manager_name").val() + ": </strong>" + $("input#manager_email").val() + "</li>")
+  $("ul#managers-list").append("<li class='font-inc'><strong>" + "<%= @manager.name %>" + ": </strong>" + $("input#manager_email").val() + "</li>")
 }
 $("input#manager_name").val("")
 $("input#manager_email").val("")
