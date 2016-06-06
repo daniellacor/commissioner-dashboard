@@ -1,1 +1,44 @@
-Hello
+<!-- WRAPPER -->
+<div class="wrapper">
+
+  <!-- HOME -->
+  <%= render partial: "leagues/dashboard_jumbotron", locals: {league: @league} %>
+   <!-- /HOME -->
+   <!-- PORTFOLIO DESCRIPTION -->
+   <%= render "layouts/messages" %>
+   <section class="module-small">
+
+     <div class="container">
+
+       <div class="row">
+
+         <div class="col-sm-6">
+
+           <div class="work-details">
+             <h3 class="work-details-title font-alt">Managers</h3>
+             <ul id="managers-list">
+               <% if @league.managers.count == 0 %>
+               <li class="font-inc" id="no-manager"><strong>No managers</strong></li>
+               <% else %>
+               <% @managers.each do |manager| %>
+               <%= link_to league_manager_path(@league, manager) do %>
+               <li class="font-inc"><strong><%= manager.name %>: </strong><%= manager.email %></li>
+               <% end %>
+                <% end %>
+              <% end %>
+             </ul>
+           </div>
+
+         </div>
+
+         <div class="col-sm-6">
+
+           <div class="work-details">
+             <h3 class="work-details-title font-alt">Something here</h3>
+           </div>
+
+       </div>
+
+     </div>
+
+   </section>

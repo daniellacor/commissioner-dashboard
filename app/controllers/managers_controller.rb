@@ -1,4 +1,9 @@
 class ManagersController < ApplicationController
+  def index
+    @league = current_user.leagues.first
+    @managers = current_user.leagues.first.managers
+  end
+
   def new
     @league = current_user.leagues.first
     @manager = Manager.new
