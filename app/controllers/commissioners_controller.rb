@@ -6,6 +6,9 @@ class CommissionersController < ApplicationController
 
   def new
     @commissioner = Commissioner.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create

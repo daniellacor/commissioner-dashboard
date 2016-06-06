@@ -1,28 +1,24 @@
-<div class="hs-caption container" id="Create_Commish" style="display: none;">
   <div class="caption-content">
     <div class="hs-title-size-4 font-alt m-b-30">
       <div class="row">
       <h4 class="font-alt m-t-0 m-b-0">Sign-Up</h4>
       <hr class="divider-w m-t-10 m-b-20">
 
+          <%= form_for (@commissioner) do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name %><br>
+            <%= f.label :password %>
+            <%= f.password_field :password %><br>
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation %><br>
+            <%= f.label :email %>
+            <%= f.text_field :email %><br>
+            <%= f.label :phone_number %>
+            <%= f.text_field :phone_number %><br>
+            <%= f.submit 'Create', class: "btn btn-g btn-circle btn-lg"  %><br>
+            <%= link_to 'Back', :back, class: "btn btn-g btn-circle btn-lg" %>
+          <% end %>
 
-<%= form_for (@commissioner) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %><br>
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number %><br>
-
-  <%= f.submit 'Create', class: "btn btn-g btn-circle btn-lg"  %>
-<% end %>
-<a class="btn btn-g btn-circle btn-lg" id="BackSU" href="#"></i>Back</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>

@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   end
 
 
-  get '/sign-up' => 'sessions#new'
+  get '/signup' => 'commissioners#new'
+  post '/signup' => 'commissioners#create'
+  get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   post '/dues/pay' => 'dues#pay'
