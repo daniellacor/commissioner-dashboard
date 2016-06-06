@@ -27,6 +27,7 @@ class DuesController < ApplicationController
   end
 
   def update
+    @due = Due.find(params[:id])
   end
 
   def show
@@ -36,10 +37,15 @@ class DuesController < ApplicationController
   def destroy
   end
 
+  def pay
+    @due = Due.find(params[:id])
+    @due.paid = true
+  end
+
   private
 
   def due_params
-    params.require(:due).permit(:amount, :paid)
+    params.require(:due).permit(:amount, :paids)
   end
 
 end
