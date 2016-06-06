@@ -11,7 +11,7 @@
 
         <div class="col-sm-6 col-sm-offset-3">
 
-          <h1 class="module-title font-alt align-center"><%= current_user.name.upcase %>'s ACCOUNT PAGE </h1>
+          <h1 class="module-title font-alt align-center"> EDIT ACCOUNT PAGE </h1>
           <!-- QUOTE OF THE DAY
 
           <div class="module-subtitle font-inc align-center">
@@ -44,13 +44,20 @@
     </div>
 
     <div class="module-title font-alt align-center">
-        <%= current_user.email %><br>
-        <%= current_user.phone_number %><br>
+      <%= form_for (@commissioner) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %><br>
+        <%= f.label :password %>
+        <%= f.password_field :password %><br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %><br>
+        <%= f.label :email %>
+        <%= f.text_field :email %><br>
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number %><br>
+        <%= f.submit 'Update', class: "btn btn-g btn-circle btn-lg"  %>
+      <% end %>
     <div><br>
-    <div class="btn btn-g btn-circle btn-lg">
-        <%= link_to "EDIT ACCOUNT", edit_commissioner_path(@commissioner) %>
-    </div>
-
 
   </section>
   <!-- /PORTFOLIO -->
