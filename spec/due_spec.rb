@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Due do
+RSpec.describe Due do
 
   it "has an amount" do
     due = Due.new(amount: 20)
