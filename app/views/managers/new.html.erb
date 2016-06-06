@@ -5,6 +5,7 @@
   <%= render partial: "leagues/dashboard_jumbotron", locals: {league: @league} %>
    <!-- /HOME -->
    <!-- PORTFOLIO DESCRIPTION -->
+   <%= render "layouts/messages" %>
    <section class="module-small">
 
      <div class="container">
@@ -15,12 +16,14 @@
 
            <div class="work-details">
              <h3 class="work-details-title font-alt"><%= @league.name %></h3>
-             <ul>
+             <ul id="managers-list">
                <% if @league.managers.count == 0 %>
-               <li class="font-inc"><strong>No managers</strong></li>
+               <li class="font-inc" id="no-manager"><strong>No managers</strong></li>
                <% else %>
                <% @league.managers.each do |manager| %>
+               <%= link_to league_manager_path(@league, manager) do %>
                <li class="font-inc"><strong><%= manager.name %>: </strong><%= manager.email %></li>
+               <% end %>
                 <% end %>
               <% end %>
              </ul>
@@ -32,7 +35,7 @@
 
            <div class="work-details">
              <h3 class="work-details-title font-alt">Add Manager</h3>
-             <%= form_for [@league, @manager] do |f| %>
+             <%= form_for [@league, @manager], remote: true do |f| %>
               <div class="form-group">
              		 <%= f.text_field :name, class: "form-control input-lg", placeholder: "Name" %>
               </div>

@@ -10,21 +10,21 @@
            <div class="work-details">
              <h1>League Finances</h1>
 
-             <h3>League Pot: <%=  %></h3>
+             <h3>League Pot: $<%= @due.amount * (@due.league.managers.length + 1)%></h3>
 
              <% total = 0  %>
-             <h3>Total Collected: $
-                  <% @due.league.managers.each do |manager|  %>
-                    <% total += manager.due.amount  %>
-                  <% end  %>
-                  <%= total %>
-             </h3>
+
+             <h3>Total Collected: $  </h3>
 
              <h3>Buy In: $<%= @due.amount %></h3>
 
-             <h1>League</h1>
-
-
+             <h1>Manage Payments</h1>
+               <% @due.league.managers.each do |manager|  %>
+                 <h3 class="manager-paid"><%= manager.name %>
+                   <% if @due.manager.due.paid %>paid
+                   <% else %> <span id="due-amt">$<%= @due.amount %></span><button class: "btn btn-g btn-circle btn-sm" id="paid-btn">paid</button>
+                   <% end %><br>
+               <% end %><h3>
            </div>
        </div>
      </div>
