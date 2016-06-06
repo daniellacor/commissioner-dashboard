@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/sign-up' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+  post '/dues/pay' => 'dues#pay'
 
 
 

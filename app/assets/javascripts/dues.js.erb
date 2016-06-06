@@ -1,0 +1,12 @@
+$(document).on("ready", function() {
+  $("#paid-btn").on("click", function() {
+    $.ajax({
+      type: "POST",
+      url: "/dues/pay"
+      success: function(response) {
+        $(".due-amt").html("paid")
+        $('#paid-btn').hide()
+     }
+   })
+  })
+}
