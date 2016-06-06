@@ -1,19 +1,38 @@
-<h1>League Dues</h1>
+<!-- WRAPPER -->
+<div class="wrapper">
 
-<h2>Per manager:</h2>
+  <!-- HOME -->
+  <%= render partial: "leagues/dashboard_jumbotron", locals: {league: @league}%>
+  <!-- /HOME -->
+		<!-- PORTFOLIO -->
+		<section class="module-small p-t-20 p-b-60" id="League_Create_Form">
 
-<%= form_for (@commissioner) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :password %>
-  <%= f.text_field :password %><br>
-  <%= f.label :password_confirmation %>
-  <%= f.text_field :password_confirmation %><br>
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number %><br>
+			<div class="container">
 
-  <%= f.submit 'Create', class: "btn btn-g btn-circle btn-lg"  %>
-  
-<%= form_tag
+        <!-- NEW LEAGUE FORM -->
+        <div class="row">
+        <h4 class="font-alt m-t-0 m-b-0">League Buy-In</h4>
+       <hr class="divider-w m-t-10 m-b-20">
+
+
+        <%= form_for [@league, @due] do |f| %>
+          <%= f.label :amount, 'Set Buy-In: ' %>
+          <%= f.text_field :amount %><br><br>
+
+          <%= f.submit 'Submit', class: "btn btn-border-d btn-circle btn-lg"  %>
+
+        <% end %>
+        <br>
+
+      </div>
+    </div>
+  </section>
+<div>
+        <!-- /NEW LEAGUE FORM -->
+
+
+
+        		<!-- FOOTER -->
+
+
+        		<!-- /FOOTER -->

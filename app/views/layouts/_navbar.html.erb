@@ -7,7 +7,11 @@
           <span class="sr-only">Toggle navigation</span>
 
         </button>
-        <%= link_to "CD", root_path, class: "navbar-brand" %>
+        <% if signed_in? %>
+          <%= link_to "CD", root_path, class: "navbar-brand" %>
+        <% else %>
+          <%= link_to "CD", league_path, class: "navbar-brand" %>
+        <% end %>
       </div>
 
       <div class="collapse navbar-collapse" id="custom-collapse">
@@ -29,13 +33,15 @@
           </li>
 
 
+          <% if signed_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown" data-toggle="dropdown">Tools</a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href=""><i class="league"></i>League</a></li>
-              <li><a href=""><i class="payout"></i>Payout</a></li>
-              <li><a href=""><i class="payout"></i>News</a></li>
-              <li><a href=""><i class="payout"></i>Injury Report</a></li>
+              <li><a href="/leagues/<%=current_user.id%>"><i class="league"></i>League</a></li>
+              <li><a href=""><i class="finances"></i>Finances</a></li>
+              <li><a href=""><i class="new"></i>News</a></li>
+              <li><a href=""><i class="injury-report"></i>Injury Report</a></li>
+
             </ul>
           </li>
 
@@ -45,6 +51,7 @@
             <ul class="dropdown-menu" role="menu">
               <li><a href="/commissioners/<%=current_user.id%>"<i class="account"></i>Account</a></li>
               <li><a href=""><i class="payout"></i>Logout</a></li>
+
             </ul>
           </li>
 
