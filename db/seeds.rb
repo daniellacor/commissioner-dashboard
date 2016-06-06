@@ -8,7 +8,7 @@
 
 
 justin = Commissioner.create(name: "Justin", email: "j@flatiron.com", password: "asdf", phone_number: "555-555-5555")
-daniella = Commissioner.create(name: "Justin", email: "d@flatiron.com", password: "asdf", phone_number: "666-666-6666")
+daniella = Commissioner.create(name: "Daniella", email: "d@flatiron.com", password: "asdf", phone_number: "666-666-6666")
 
 j_league = League.create(name: "J's League", commissioner_id: 1)
 d_league = League.create(name: "D's League", commissioner_id: 2)
