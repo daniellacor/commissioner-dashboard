@@ -1,0 +1,10 @@
+if ($("#no-manager").text() == "No managers") {
+  $("#no-manager").remove()
+  $("ul#managers-list").append("<li class='font-inc'><strong>" + $("input#manager_name").val() + ": </strong>" + $("input#manager_email").val() + "</li>")
+}
+else {
+  $("ul#managers-list").append("<li class='font-inc'><strong>" + $("input#manager_name").val() + ": </strong>" + $("input#manager_email").val() + "</li>")
+}
+$("input#manager_name").val("")
+$("input#manager_email").val("")
+$("input#manager_phone_number").val("")
