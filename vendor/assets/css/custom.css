@@ -10,3 +10,7 @@ Place here your custom CSS styles
 input {
   background-color: transparent;
 }
+
+.commish-account {
+  color: black;
+}
