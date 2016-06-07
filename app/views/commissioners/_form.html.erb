@@ -16,8 +16,8 @@
             <%= f.label :phone_number %>
             <%= f.text_field :phone_number %><br>
             <%= f.submit 'Create', class: "btn btn-g btn-circle btn-lg"  %><br>
-            <%= link_to 'Back', :back, class: "btn btn-g btn-circle btn-lg" %>
-          <% end %>
+            <%= link_to 'Back', homescreen_path, class: "btn btn-g btn-circle btn-lg", remote: true %>
+      <% end %>
 
       </div>
     </div>

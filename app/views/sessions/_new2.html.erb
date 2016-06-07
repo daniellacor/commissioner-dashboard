@@ -10,7 +10,7 @@
         <%= label_tag :password %>
         <%= password_field_tag :password %><br>
         <%= submit_tag 'Sign In', class: "btn btn-g btn-circle btn-lg" %><br>
-        <%= link_to 'Back', :back, class: "btn btn-g btn-circle btn-lg" %>
+        <%= link_to 'Back', homescreen_path, class: "btn btn-g btn-circle btn-lg", remote: true %>
     <% end %>
 
     </div>
