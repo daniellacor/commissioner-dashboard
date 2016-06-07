@@ -6,11 +6,12 @@
   <% else %>
   <% @managers.sort.each do |manager| %>
   <h4><li class="font-inc">
-    <%= link_to league_manager_path(@league, manager) do %>
+
     <strong><%= manager.name %>: </strong><%= manager.email %></li></h4>
-  <% end %>
+
     <li class="font-inc"><strong><%= link_to 'EDIT', edit_league_manager_path(@league, manager), remote: true %> |
-      <%= link_to 'DELETE', prompt_path(manager), remote: true %> | EMAIL | TEXT</li>
+      <%= link_to 'DELETE', prompt_path(manager), remote: true %> |
+      <%= link_to 'EMAIL', email_path(manager), remote: true %> | TEXT</li>
    <% end %>
  <% end %>
 </ul>
