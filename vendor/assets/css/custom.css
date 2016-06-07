@@ -15,10 +15,6 @@ input {
   color: black;
 }
 
-#league-finances {
-  float:left;
-}
-
-#mng-payments {
-  float:right;
+table tr {
+  height: 50px;
 }

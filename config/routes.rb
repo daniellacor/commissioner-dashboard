@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :managers
   end
 
+  resources :drafts
+  
   get 'homescreen' => 'home#back'
   get '/signup' => 'commissioners#new'
   post '/signup' => 'commissioners#create'
@@ -13,7 +15,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   post '/dues/pay/:id' => 'dues#pay'
-
 
 
 
