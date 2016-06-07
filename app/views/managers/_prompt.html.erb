@@ -1,0 +1,4 @@
+<div class="work-details">
+  <h3 class="work-details-title font-alt">Are you sure you want to delete <%= @manager.name %>?</h3><br>
+  <%= link_to 'DELETE', league_manager_path(@league, @manager), method: :delete, class: "btn btn-d btn-circle btn-lg", remote: true %>
+   </div>
