@@ -19,6 +19,8 @@ class ManagersController < ApplicationController
     end
     @manager.league_id = params[:league_id]
     @manager.save
+    @commissioner = current_user
+    UserMailer.welcome(@manager, @commissioner).deliver_now
     if current_user.due
     @manager.due = Due.create(amount: current_user.due.amount, manager_id: @manager.id, league_id: @league.id)
     end
