@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :managers
   end
 
+  get 'managers/prompt/:id' => 'managers#prompt', as: 'prompt'
   get 'homescreen' => 'home#back'
   get '/signup' => 'commissioners#new'
   post '/signup' => 'commissioners#create'
