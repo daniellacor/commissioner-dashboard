@@ -1,0 +1,16 @@
+<div class="work-details">
+<h2 class="work-details-title font-alt">Managers</h2>
+<ul id="managers-list">
+  <% if @league.managers.count == 0 %>
+  <li class="font-inc" id="no-manager"><strong>No managers</strong></li>
+  <% else %>
+  <% @managers.sort.each do |manager| %>
+  <h4><li class="font-inc">
+    <%= link_to league_manager_path(@league, manager) do %>
+    <strong><%= manager.name %>: </strong><%= manager.email %></li></h4>
+  <% end %>
+    <li class="font-inc"><strong><%= link_to 'EDIT', edit_league_manager_path(@league, manager), remote: true %> |
+      <%= link_to 'DELETE', prompt_path(manager), remote: true %> | EMAIL | TEXT</li>
+   <% end %>
+ <% end %>
+</ul>

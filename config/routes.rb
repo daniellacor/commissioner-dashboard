@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   root "home#index"
+  resources :drafts
   resources :commissioners
   resources :leagues do
     resources :dues
     resources :managers
   end
 
-  resources :drafts
-  
+  get 'managers/prompt/:id' => 'managers#prompt', as: 'prompt'
   get 'homescreen' => 'home#back'
   get '/signup' => 'commissioners#new'
   post '/signup' => 'commissioners#create'
