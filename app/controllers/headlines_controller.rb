@@ -6,13 +6,21 @@ class HeadlinesController < ApplicationController
     doc = Nokogiri::HTML(open("http://bleacherreport.com/nfl"))
 
 
+    @headlines = {}
+
     @headlinesLinks = []
+    @headlinesTitles = []
     doc.css('ol a')[1..10].each do |headline|
-      title = headline.children[1].children.text.strip
       link = headline.attribute('href').value
+      title = headline.children[1].children.text.strip
+
+      @headlines[title] = link
+
       @headlinesLinks << link
+      @headlinesTitles << title
     end
-    @headlinesArr
+
+
   end
 
 end
