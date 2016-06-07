@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-class NFLScraper < ActiveRecord::Base
+class News < ActiveRecord::Base
 
   attr_accessor :url, :data
 
