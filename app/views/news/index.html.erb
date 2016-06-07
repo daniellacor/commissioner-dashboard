@@ -1,0 +1,32 @@
+<div class="wrapper">
+
+  <!-- HOME -->
+  <%= render partial: "leagues/dashboard_jumbotron", locals: {league: @league} %>
+   <!-- /HOME -->
+   <!-- PORTFOLIO DESCRIPTION -->
+   <%= render "layouts/messages" %>
+   <section class="module-small">
+
+     <div class="container">
+
+       <div class="row">
+
+         <div class="col-sm-6">
+
+           <div class="work-details">
+             <h3 class="work-details-title font-alt">NFL NEWS</h3>
+              <% @headlines.each do |headline| %>
+                <%= headline.txt %>
+              <% end  %>
+           </div>
+
+         </div>
+
+         <div class="col-sm-6">
+
+
+       </div>
+
+     </div>
+
+   </section>

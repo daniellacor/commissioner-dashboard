@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :drafts
-  
+  resources :headlines
+
   get 'homescreen' => 'home#back'
   get '/signup' => 'commissioners#new'
   post '/signup' => 'commissioners#create'
