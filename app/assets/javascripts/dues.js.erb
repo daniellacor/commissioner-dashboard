@@ -1,12 +1,16 @@
 $(document).on("ready", function() {
-  $("#paid-btn").on("click", function() {
+  $(".paid-btn").on("click", function() {
+    var manager_id = $(this).attr('id')
     $.ajax({
       type: "POST",
-      url: "/dues/pay"
+      url: "/dues/pay/" + manager_id,
+      context: this,
       success: function(response) {
-        $(".due-amt").html("paid")
-        $('#paid-btn').hide()
-     }
-   })
+        debugger
+        var manager_id = $(this).attr('id')
+        $("span.manager-due#" + manager_id).html("paid")
+        $(this).hide()
+      }
+    })
   })
-}
+})

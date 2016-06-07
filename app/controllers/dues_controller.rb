@@ -43,8 +43,9 @@ class DuesController < ApplicationController
   end
 
   def pay
-    @due = Due.find(params[:id])
+    @due = Due.find_by(id: params[:id])
     @due.paid = true
+    head :ok
   end
 
   private

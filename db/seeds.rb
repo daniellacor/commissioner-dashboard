@@ -13,6 +13,14 @@ daniella = Commissioner.create(name: "Daniella", email: "d@flatiron.com", passwo
 j_league = League.create(name: "J's League", commissioner_id: 1)
 d_league = League.create(name: "D's League", commissioner_id: 2)
 
+first_manager = Manager.create(name: "Bob", email: "bob@bob.com", phone_number: "333-333-3333", league_id: 1)
+second_manager = Manager.create(name: "George", email: "george@george.com", phone_number: "222-222-2222", league_id: 1)
+third_manager = Manager.create(name: "Jim", email: "jim@jim.com", phone_number: "111-111-1111", league_id: 1)
+
+another_manager = Manager.create(name: "Lauren", email: "lauren@lauren.com", phone_number: "333-333-3333", league_id: 2)
+other_manager = Manager.create(name: "Veronica", email: "veronica@veronica.com", phone_number: "222-222-2222", league_id: 2)
+again_manager = Manager.create(name: "Maureen", email: "maureen@maureen.com", phone_number: "111-111-1111", league_id: 2)
+
 j_due = Due.create(commissioner_id: 1, league_id: 1, amount: 25)
 d_due = Due.create(commissioner_id: 2, league_id: 2, amount: 25)
 
@@ -23,11 +31,3 @@ third_due = Due.create(manager_id: 3, league_id: 1, amount: 25)
 another_due = Due.create(manager_id: 4, league_id: 2, amount: 25)
 other_due = Due.create(manager_id: 5, league_id: 2, amount: 25)
 again_due = Due.create(manager_id: 6, league_id: 2, amount: 25)
-
-first_manager = Manager.create(name: "Bob", email: "bob@bob.com", phone_number: "333-333-3333", league_id: 1)
-second_manager = Manager.create(name: "George", email: "george@george.com", phone_number: "222-222-2222", league_id: 1)
-third_manager = Manager.create(name: "Jim", email: "jim@jim.com", phone_number: "111-111-1111", league_id: 1)
-
-another_manager = Manager.create(name: "Lauren", email: "lauren@lauren.com", phone_number: "333-333-3333", league_id: 2)
-other_manager = Manager.create(name: "Veronica", email: "veronica@veronica.com", phone_number: "222-222-2222", league_id: 2)
-again_manager = Manager.create(name: "Maureen", email: "maureen@maureen.com", phone_number: "111-111-1111", league_id: 2)

@@ -14,3 +14,11 @@ input {
 .commish-account {
   color: black;
 }
+
+#league-finances {
+  float:left;
+}
+
+#mng-payments {
+  float:right;
+}
