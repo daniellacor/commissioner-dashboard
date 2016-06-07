@@ -8,8 +8,14 @@ Rails.application.routes.draw do
     resources :managers
   end
 
+
+  resources :drafts
+  resources :headlines
+
+
   get 'managers/email/:id' => 'managers#write_email', as: 'email'
-  post 'managers/email/:id' => 'managers#send_email', as: 'send_email' 
+  post 'managers/email/:id' => 'managers#send_email', as: 'send_email'
+
   get 'managers/prompt/:id' => 'managers#prompt', as: 'prompt'
   get 'homescreen' => 'home#back'
   get '/signup' => 'commissioners#new'
