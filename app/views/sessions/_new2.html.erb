@@ -1,40 +1,18 @@
-<!-- WRAPPER -->
-<div class="wrapper" id="SIform" style="display: none;">
+<div class="caption-content">
+  <div class="hs-title-size-4 font-alt m-b-30">
+    <div class="row">
+    <h4 class="font-alt m-t-0 m-b-0">Log-In</h4>
+    <hr class="divider-w m-t-10 m-b-20">
 
-  <!-- COMPONENTS -->
-  <section class="module">
-
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-sm-8 col-sm-offset-2">
-
-          <h4 class="font-alt m-t-0 m-b-0">Basic Forms</h4>
-          <hr class="divider-w m-t-10 m-b-20">
-
-          <div class="form-group">
-            <input class="form-control input-lg" type="text" placeholder="Large input">
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Default input">
-          </div>
-          <div class="form-group">
-            <input class="form-control input-sm" type="text" placeholder="Small input">
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Disabled input" disabled>
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Readonly input" readonly>
-          </div>
-          <textarea class="form-control" rows="7" placeholder="Textarea"></textarea>
-
-        </div>
-
-      </div>
+    <%= form_tag 'login' do %>
+        <%= label_tag :email %>
+        <%= text_field_tag :email %><br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %><br>
+        <%= submit_tag 'Sign In', class: "btn btn-g btn-circle btn-lg" %><br>
+        <%= link_to 'Back', homescreen_path, class: "btn btn-g btn-circle btn-lg", remote: true %>
+    <% end %>
 
     </div>
-
-  </section>
+  </div>
 </div>

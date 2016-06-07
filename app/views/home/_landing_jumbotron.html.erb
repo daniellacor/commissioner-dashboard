@@ -1,26 +1,19 @@
 <section class="module-hero module-parallax module-fade module-full-height bg-dark-30" data-background="http://images.123hdwallpapers.com/20150517/sports-wallpaper-american-football-1024x768.jpg">
 
-  <div class="hs-caption container" id="home">
+  <div class="hs-caption container">
     <div class="caption-content">
       <div class="hs-title-size-4 font-alt m-b-30">
-
-Welcome to Commissioner Dashboard
-<div class="hs-title-size-1 font-inc">
-EST 2016
-<div>
-<br>
+            Welcome to Commissioner Dashboard
+              <div class="hs-title-size-1 font-inc">
+                      EST 2016
+              </div>
+      </div>
   <% if signed_in?  %>
     <a class="btn btn-g btn-circle btn-lg" id="Dashboard" href="leagues/<%=current_user.id%>"></i>Dashboard</a>
   <% else  %>
-    <a class="btn btn-g btn-circle btn-lg" id="Sign-Up" href="#"></i>Sign-Up</a>
-    <a class="btn btn-g btn-circle btn-lg" id="Log-In" href="#"></i>Log-In</a>
+    <%= link_to 'Sign-Up', signup_path, class: "btn btn-g btn-circle btn-lg", remote: true %>
+    <%= link_to 'Log-In', login_path, class: "btn btn-g btn-circle btn-lg", remote: true %>
   <% end %>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<%= render partial: "commissioners/form", locals: {commmissioner: @commissioner} %>
-<%= render "sessions/new" %>
+    </div>
+  </div>
 </section >

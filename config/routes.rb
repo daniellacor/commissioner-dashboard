@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     resources :managers
   end
 
-
-  get '/sign-up' => 'sessions#new'
+  get 'homescreen' => 'home#back'
+  get '/signup' => 'commissioners#new'
+  post '/signup' => 'commissioners#create'
+  get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   post '/dues/pay/:id' => 'dues#pay'

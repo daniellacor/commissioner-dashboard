@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @commissioner = Commissioner.new
+  end
+
+  def back
+    respond_to do |format|
+      format.js
+    end
   end
 end
