@@ -34,6 +34,26 @@ class ManagersController < ApplicationController
       format.js
     end
   end
+
+  def write_email
+    @manager = Manager.find_by(id: params[:id])
+    @league = @manager.league
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def send_email
+    @subject = params[:subject]
+    @content = params[:content]
+    @manager = Manager.find_by(id: params[:id])
+    @commissioner = current_user
+    UserMailer.manager(@manager, @commissioner, @subject, @content).deliver_now
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def destroy
     @manager = Manager.find_by(id: params[:id])
     @league = @manager.league

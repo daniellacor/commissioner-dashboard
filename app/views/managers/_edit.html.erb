@@ -1,5 +1,5 @@
 <div class="work-details">
-  <h3 class="work-details-title font-alt">Edit Manager</h3>
+  <h2 class="work-details-title font-alt">Edit <%= @manager.name %></h2>
   <%= form_for [@league, @manager], remote: true do |f| %>
    <div class="form-group">
       <%= f.text_field :name, class: "form-control input-lg", placeholder: "Name" %>
