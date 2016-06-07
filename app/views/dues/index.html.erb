@@ -1,40 +1,46 @@
 <div class="wrapper">
 
   <%= render partial: "leagues/dashboard_jumbotron", locals: {league: @league} %>
-
+   <%= render "layouts/messages" %>
    <section class="module-small">
      <div class="container">
        <div class="row">
          <div class="col-sm-6">
            <div class="work-details">
-             <div id="league-finances">
-             <h1>League Finances</h1>
+             <h2 class="work-details-title font-alt">League Finances</h2>
+             <ul id="finances">
+               <h3>League Pot: $<%= (@league.managers.count + 1) * (@league.commissioner.due.amount) %></h3>
 
-             <h3>League Pot: $<%= (@league.managers.count + 1) * (@league.commissioner.due.amount) %></h3>
+               <% total = 0 %>
 
-             <% total = 0 %>
-
-             <h3>Total Collected: $
-             <% @managers.each do |manager| %>
-               <% if manager.due.paid == false %>
-                   <% total+= manager.due.amount  %>
-                <% end %>
-              <% end %>
-              <%=total %></h3>
-
-             <h3>Buy In: $<%= @league.commissioner.due.amount %></h3>
-
-             <h1>Manage Payments</h1>
+               <h3>Total Collected: $
                <% @managers.each do |manager| %>
-                 <h3 class="manager-paid"><%= manager.name %>
-                   <% if manager.due.paid %>
-                     <% else %> <span class="manager-due" id="<%=manager.id%>">$<%= manager.due.amount %></span><button class="btn btn-g btn-circle btn-sm paid-btn" id="<%=manager.id%>">paid</button>
-                   <% end %><br>
-               <% end %><h3>
-               </div>
-            </div>
+                 <% if manager.due.paid == false %>
+                     <% total+= manager.due.amount  %>
+                  <% end %>
+                <% end %>
+                <%=total %></h3>
+
+               <h3>Buy In: $<%= @league.commissioner.due.amount %></h3>
+             </ul>
            </div>
+
          </div>
+
+         <div class="col-sm-6">
+
+           <div class="work-details">
+             <h2 class="work-details-title font-alt">Manage Payments</h2>
+             <% @managers.each do |manager| %>
+               <h3 class="manager-paid"><%= manager.name %>
+                 <% if manager.due.paid %>
+                   <% else %> <span class="manager-due" id="<%=manager.id%>">$<%= manager.due.amount %></span><button class="btn btn-g btn-circle btn-sm paid-btn" id="<%=manager.id%>">paid</button>
+                 <% end %><br>
+             <% end %><h3>
+           </div>
+
+       </div>
+
      </div>
 
    </section>
