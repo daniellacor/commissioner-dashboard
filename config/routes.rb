@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "home#index"
+  resources :drafts
   resources :commissioners
   resources :leagues do
     resources :dues
@@ -14,7 +15,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   post '/dues/pay/:id' => 'dues#pay'
-
 
 
 
