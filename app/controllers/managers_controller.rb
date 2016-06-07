@@ -9,6 +9,42 @@ class ManagersController < ApplicationController
     @manager = Manager.new
   end
 
+  def edit
+    @league = current_user.leagues.first
+    @manager = Manager.find_by(id: params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def update
+    @manager = Manager.find_by(id: params[:id])
+    @manager = @manager.update(manager_params)
+    @managers = current_user.leagues.first.managers
+    @league = current_user.leagues.first
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def prompt
+    @manager = Manager.find_by(id: params[:id])
+    @league = @manager.league
+    respond_to do |format|
+      format.js
+    end
+  end
+  def destroy
+    @manager = Manager.find_by(id: params[:id])
+    @league = @manager.league
+    @manager.destroy
+    @league = current_user.leagues.first
+    @managers = current_user.leagues.first.managers
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def create
     @manager = Manager.new(manager_params)
     if manager_params["name"].blank? || manager_params["email"].blank? || manager_params["phone_number"].blank?
