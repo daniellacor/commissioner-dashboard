@@ -76,4 +76,15 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+  :address => "smtp.mail.yahoo.com",
+  :port => 587,
+  :domain => "www.yahoo.com",
+  :user_name => ENV["EMAIL"],
+  :password => ENV["PASSWORD"] ,
+  :enable_starttls_auto => true,
+  :authentication => :plain
+}
 end
