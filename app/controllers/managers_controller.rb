@@ -5,6 +5,32 @@ class ManagersController < ApplicationController
     @headlines = Headlines.get_headlines
   end
 
+  def write_text
+    @league = current_user.leagues.first
+    @manager = Manager.find_by(id: params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def send_text
+    @manager = Manager.find_by(id: params[:id])
+    number = @manager.phone_number
+    twilio_token = ENV["TWILIO_TOKEN"]
+    twilio_sid = ENV["TWILIO_SID"]
+    twilio_phone_number = ENV["TWILIO_PHONE_NUMBER"]
+
+    @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+    @twilio_client.messages.create(
+      :from => "+1#{twilio_phone_number}",
+      :to => number,
+      :body => "This is my 2nd message. It gets sent to #{number}, and I still love cheese"
+    )
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def new
     @league = current_user.leagues.first
     @manager = Manager.new

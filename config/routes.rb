@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :managers
   end
 
+  get '/managers/text/:id' => 'managers#write_text', as: 'write_text'
+  post '/managers/text/:id' => 'managers#send_text', as: 'send_text'
+  post 'twilio/text/:id' => 'twilio#send_text_message', as: 'twilio_text'
   get 'managers/email/:id' => 'managers#write_email', as: 'email'
   post 'managers/email/:id' => 'managers#send_email', as: 'send_email'
   get 'leagues/email/:id' => 'leagues#write_email', as: 'league_email'
