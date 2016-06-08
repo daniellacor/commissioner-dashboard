@@ -11,11 +11,12 @@
           <h1 class="module-title font-alt align-center"><%= current_user.name.upcase %>'s DASHBOARD </h1>
 
           <div class="module-subtitle font-inc align-center">
-            Current League: <% if current_user.leagues.first %>
-              <%= league.name %>
-            <% else %>
-              None
+          <% if current_user.leagues.first %>
+        <marquee>Top Headlines from Bleacher Report:
+            <% @headlines.each do |title, link| %>
+            <%= link_to title, link, :target => '_blank', :id => 'headlines' %> &emsp;
             <% end %>
+            <% end %></marquee>
           </div>
 
         </div>

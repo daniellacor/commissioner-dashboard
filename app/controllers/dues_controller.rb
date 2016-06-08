@@ -4,11 +4,13 @@ class DuesController < ApplicationController
     @dues = current_user.leagues.first.dues
     @managers = current_user.leagues.first.managers
     @league = current_user.leagues.first
+    @headlines = Headlines.get_headlines
   end
 
   def new
     @due = Due.new
     @league = current_user.leagues.first
+    @headlines = Headlines.get_headlines
   end
 
   def create
@@ -37,6 +39,7 @@ class DuesController < ApplicationController
 
   def show
     @due = Due.find(params[:id])
+    @headlines = Headlines.get_headlines
   end
 
   def destroy

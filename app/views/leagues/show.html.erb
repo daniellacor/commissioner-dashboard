@@ -32,9 +32,9 @@
 
 					<!-- PORTFOLIO ITEM -->
 					<li class="work-item manager">
-            <%= link_to league_managers_path(@league) do %>
+            <%= link_to league_managers_path(@league), remote: true do %>
 							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+								<img id="tile" src="https://pbs.twimg.com/media/CBZIQHHWgAAIBk0.jpg:large" alt="">
 							</div>
 							<div class="work-caption">
 								<h3 class="work-title font-alt">View Managers</h3>
@@ -50,7 +50,7 @@
           <li class="work-item finance">
             <%= link_to league_dues_path(@league) do %>
               <div class="work-image">
-                <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+                <img id = "tile" src="https://pbs.twimg.com/media/CBZHHaIVAAANnlV.jpg" alt="">
               </div>
               <div class="work-caption">
                 <h3 class="work-title font-alt">View Finances</h3>
@@ -64,9 +64,9 @@
 
 					<!-- PORTFOLIO ITEM -->
 					<li class="work-item email">
-						<a href="portfolio-single-1.html">
+						<%= link_to league_email_path(@league) do %>
 							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+								<img id = "tile" src="https://pbs.twimg.com/media/CBJZqrfWgAAzPOp.jpg:large" alt="">
 							</div>
 							<div class="work-caption">
 								<h3 class="work-title font-alt">Email League</h3>
@@ -74,7 +74,7 @@
 									Draft, send, and manage league-wide emails
 								</div>
 							</div>
-						</a>
+						<% end %>
 					</li>
 					<!-- /PORTFOLIO ITEM -->
 
@@ -82,7 +82,7 @@
 					<li class="work-item draft">
             <%= link_to drafts_path do %>
 							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+								<img id = "tile"  src="https://pbs.twimg.com/media/CA_LuoGUYAEq-sm.jpg" alt="">
 							</div>
 							<div class="work-caption">
 								<h3 class="work-title font-alt">Schedule Draft</h3>
@@ -99,7 +99,7 @@
 					<li class="work-item news">
             <%= link_to headlines_path do %>
 							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+								<img id = "tile" src="https://pbs.twimg.com/media/CBI7ztQU0AARigs.jpg" alt="">
 							</div>
 							<div class="work-caption">
 								<h3 class="work-title font-alt">NFL News</h3>
@@ -115,7 +115,7 @@
 					<li class="work-item manager">
 						<a href="portfolio-single-1.html">
 							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+								<img id = "tile" src="https://pbs.twimg.com/media/CBOuWhBUkAENRiA.jpg" alt="">
 							</div>
 							<div class="work-caption">
 								<h3 class="work-title font-alt">Schedule a Watch Party</h3>
@@ -131,7 +131,7 @@
 					<li class="work-item manager">
 						<%= link_to new_league_manager_path(@league) do %>
 							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+								<img id = "tile" src="https://pbs.twimg.com/media/CBZDyHKUsAAakl9.jpg" alt="">
 							</div>
 							<div class="work-caption">
 								<h3 class="work-title font-alt">Add Mangaers</h3>
@@ -147,7 +147,7 @@
 					<li class="work-item finance">
 						<a href="portfolio-single-1.html">
 							<div class="work-image">
-								<img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+								<img id = "tile" src="https://pbs.twimg.com/media/CBZFRwnUYAAX8F2.jpg" alt="">
 							</div>
 							<div class="work-caption">
 								<h3 class="work-title font-alt">Text Non-Payers</h3>
@@ -163,7 +163,7 @@
           <li class="work-item manager">
             <a href="portfolio-single-1.html">
               <div class="work-image">
-                <img src="http://farm3.staticflickr.com/2074/3528486185_9cff974311_z.jpg" alt="">
+                <img id = "tile" src="https://pbs.twimg.com/media/CBZEQ4gWgAEdYR1.jpg" alt="">
               </div>
               <div class="work-caption">
                 <h3 class="work-title font-alt">Set lineup reminder</h3>

@@ -11,7 +11,8 @@
 
     <li class="font-inc"><strong><%= link_to 'EDIT', edit_league_manager_path(@league, manager), remote: true %> |
       <%= link_to 'DELETE', prompt_path(manager), remote: true %> |
-      <%= link_to 'EMAIL', email_path(manager), remote: true %> | TEXT</li>
+      <%= link_to 'EMAIL', email_path(manager), remote: true %> |
+      <%= link_to 'TEXT', write_text_path(manager), remote: true %></li>
    <% end %>
  <% end %>
 </ul>

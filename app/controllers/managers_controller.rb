@@ -2,11 +2,47 @@ class ManagersController < ApplicationController
   def index
     @league = current_user.leagues.first
     @managers = current_user.leagues.first.managers
+    @headlines = Headlines.get_headlines
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def write_text
+    @league = current_user.leagues.first
+    @manager = Manager.find_by(id: params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def send_text
+    @manager = Manager.find_by(id: params[:id])
+    number = @manager.phone_number
+    @message = params[:message]
+    twilio_token = ENV["TWILIO_TOKEN"]
+    twilio_sid = ENV["TWILIO_SID"]
+    twilio_phone_number = ENV["TWILIO_PHONE_NUMBER"]
+
+    @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+    @twilio_client.messages.create(
+      :from => "+1#{twilio_phone_number}",
+      :to => number,
+      :body => "#{@message}"
+    )
+    respond_to do |format|
+      format.js
+    end
   end
 
   def new
+    @managers = current_user.leagues.first.managers
     @league = current_user.leagues.first
     @manager = Manager.new
+    @headlines = Headlines.get_headlines
+    respond_to do |format|
+      format.js
+    end
   end
 
   def edit
@@ -66,6 +102,7 @@ class ManagersController < ApplicationController
   end
 
   def create
+    @managers = current_user.leagues.first.managers
     @manager = Manager.new(manager_params)
     if manager_params["name"].blank? || manager_params["email"].blank? || manager_params["phone_number"].blank?
     flash[:danger] = "You were missing attributes for manager"
@@ -88,6 +125,7 @@ class ManagersController < ApplicationController
   def show
     @league = current_user.leagues.first
     @manager = Manager.find_by(id: params[:id])
+    @headlines = Headlines.get_headlines
   end
 
 private

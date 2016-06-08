@@ -14,4 +14,12 @@ class UserMailer < ApplicationMailer
     mail(to: @manager.email, :subject => "#{@subject}")
   end
 
+  def league(manager_emails, commissioner, subject, content)
+  @manager_emails = manager_emails
+  @commissioner = commissioner
+  @subject = subject
+  @content = content
+  mail(to: @manager_emails, :subject => "#{@subject}")
+  end
+
 end

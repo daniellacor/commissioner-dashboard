@@ -18,3 +18,12 @@ input {
 table tr {
   height: 50px;
 }
+
+#headlines:hover {
+  color: #FFFFFF;
+}
+
+#tile {
+  height: 20vh;
+  width: 400vh;
+}
