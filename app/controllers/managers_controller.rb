@@ -2,11 +2,13 @@ class ManagersController < ApplicationController
   def index
     @league = current_user.leagues.first
     @managers = current_user.leagues.first.managers
+    @headlines = Headlines.get_headlines
   end
 
   def new
     @league = current_user.leagues.first
     @manager = Manager.new
+    @headlines = Headlines.get_headlines
   end
 
   def edit
@@ -88,6 +90,7 @@ class ManagersController < ApplicationController
   def show
     @league = current_user.leagues.first
     @manager = Manager.find_by(id: params[:id])
+    @headlines = Headlines.get_headlines
   end
 
 private

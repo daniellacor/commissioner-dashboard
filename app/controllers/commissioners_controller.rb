@@ -5,6 +5,7 @@ class CommissionersController < ApplicationController
   end
 
   def new
+    @headlines = Headlines.get_headlines
     @commissioner = Commissioner.new
     respond_to do |format|
       format.js
