@@ -17152,3 +17152,157 @@ Started GET "/assets/slider.css" for ::1 at 2016-06-07 19:19:23 -0400
 
 
 Started GET "/assets/vertical.css" for ::1 at 2016-06-07 19:19:23 -0400
+
+
+Started GET "/" for ::1 at 2016-06-07 22:39:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mCommissioner Load (1.6ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered home/_landing_jumbotron.html.erb (67.8ms)
+  Rendered home/index.html.erb within layouts/application (75.0ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 888ms (Views: 879.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/assets/application.self-3bc376ab1c68cd9fac1fd68b09a4c84f829587c81faf07cbd09283a08d526fba.css?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/et-line-font.css" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/font-awesome.css" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/vertical.css" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/custom.self-7ea95d75a006fab497b0b6ec3e743e02d34cb9ebacf341efa6dcf80faef37706.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-06-07 22:39:45 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/commissioners.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/dues.self-3afaf0c1f18b3a04bf972695ac309ff2abcc20a9c4932543eac5d6e8c3e32205.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/due.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/assets/application.self-c900c37a1d8f83300de810726e5e4e681d3a684e498e4d1cac090e9c1906e9e4.js?body=1" for ::1 at 2016-06-07 22:39:46 -0400
+
+
+Started GET "/headlines" for ::1 at 2016-06-07 22:39:49 -0400
+Processing by HeadlinesController#index as HTML
+  [1m[36mCommissioner Load (0.4ms)[0m  [1mSELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mLeague Load (0.8ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 2]]
+  Rendered leagues/_dashboard_jumbotron.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered headlines/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 1455ms (Views: 113.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/et-line-font.css" for ::1 at 2016-06-07 22:39:51 -0400
+
+
+Started GET "/assets/font-awesome.css" for ::1 at 2016-06-07 22:39:51 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2016-06-07 22:39:51 -0400
+
+
+Started GET "/assets/vertical.css" for ::1 at 2016-06-07 22:39:51 -0400
