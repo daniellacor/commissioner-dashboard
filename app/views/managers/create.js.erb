@@ -1,10 +1,7 @@
-if ($("#no-manager").text() == "No managers") {
-  $("#no-manager").remove()
-  $("ul#managers-list").append("<li class='font-inc'><strong>" + $("input#manager_name").val() + ": </strong>" + $("input#manager_email").val() + "</li>")
-}
-else {
-  $("ul#managers-list").append("<li class='font-inc'><strong>" + "<%= @manager.name %>" + ": </strong>" + $("input#manager_email").val() + "</li>")
-}
+$("#main-panel").html("")
+$("#main-panel").append("<%= j render :partial => 'managers/managers' %>").hide().fadeIn()
+$("#side-panel").append("<div class=well well-sm'><strong>Manager Added. Notification Email Sent")
+
 $("input#manager_name").val("")
 $("input#manager_email").val("")
 $("input#manager_phone_number").val("")

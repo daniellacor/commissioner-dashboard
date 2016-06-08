@@ -3,19 +3,20 @@ Rails.application.routes.draw do
   resources :drafts
   resources :news
   resources :commissioners
+  resources :drafts
+  resources :headlines
   resources :leagues do
     resources :dues
     resources :managers
   end
 
-
-  resources :drafts
-  resources :headlines
-
-
+  get '/managers/text/:id' => 'managers#write_text', as: 'write_text'
+  post '/managers/text/:id' => 'managers#send_text', as: 'send_text'
+  post 'twilio/text/:id' => 'twilio#send_text_message', as: 'twilio_text'
   get 'managers/email/:id' => 'managers#write_email', as: 'email'
   post 'managers/email/:id' => 'managers#send_email', as: 'send_email'
-
+  get 'leagues/email/:id' => 'leagues#write_email', as: 'league_email'
+  post 'leages/email/:id' => 'leagues#send_email', as: 'league_send_email'
   get 'managers/prompt/:id' => 'managers#prompt', as: 'prompt'
   get 'homescreen' => 'home#back'
   get '/signup' => 'commissioners#new'
