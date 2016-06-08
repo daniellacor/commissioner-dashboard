@@ -1,0 +1,11 @@
+  <div class="work-details">
+    <h2 class="work-details-title font-alt">Who's Paid</h2>
+    <% @managers.each do |manager| %>
+        <% if !manager.due.paid %>
+          <h4 class="font-inc"><strong><%= manager.name %></strong> owes $<%= manager.due.amount %></span>
+        <% end %>
+      <% end %>
+        <% if !@league.commissioner.due.paid %>
+        <h4 class="font-inc"><strong>You</strong> owe $<%= @league.commissioner.due.amount %></span>
+        <% end %><br>
+  </div>
