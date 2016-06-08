@@ -17,7 +17,9 @@
              <h3 class="work-details-title font-alt">NFL NEWS</h3>
               <p><strong>Today's Bleacher Report</strong></p>
               <% @headlines.each do |title, link| %>
+                <% if title != '' %>
                 <%= link_to title, link %><br>
+                <% end  %>
               <% end %>
            </div>
          </div>

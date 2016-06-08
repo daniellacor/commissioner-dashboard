@@ -9,7 +9,7 @@ class HeadlinesController < ApplicationController
     @headlines = {}
     @injuries = []
 
-    doc.css('ol a')[1..20].each do |headline|
+    doc.css('ol a')[1..30].each do |headline|
       link = headline.attribute('href').value
       title = headline.children[1].children.text.strip
       @headlines[title] = link
@@ -18,7 +18,7 @@ class HeadlinesController < ApplicationController
 
     doc_ir.css('.tablehead td')[1..100].each do |player|
       player = player.text
-        @injuries << player
+      @injuries << player
     end
 
 
