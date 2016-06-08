@@ -30168,3 +30168,492 @@ Started GET "/assets/vertical.css" for ::1 at 2016-06-08 11:30:51 -0400
 
 
 Started GET "/assets/slider.css" for ::1 at 2016-06-08 11:30:51 -0400
+
+
+Started GET "/leagues/4" for ::1 at 2016-06-08 11:31:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCommissioner Load (0.5ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.7ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  Rendered leagues/_dashboard_jumbotron.html.erb (1.9ms)
+  [1m[36mDue Load (0.3ms)[0m  [1mSELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1  [["league_id", 4]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered leagues/_show.html.erb (23.2ms)
+  Rendered leagues/show.html.erb within layouts/application (31.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 1545ms (Views: 605.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/application.self-85940eab0b0efc6192d46a7696254885c13b44f1c5b235b1689306d29d72fa14.css?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/wow.self-26dbf4b4e414913e45fc7d0784523f6b87a529a28ebc163ac8f88e33401df7d2.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/contact.self-6ffc88c8c1f9b40be998fe0e2f5a4bf46ebce6561e00e94a9cade8be3a31d986.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jquery.mb.YTPlayer.min.self-15f3defbf71b54b00691bc7ad95d2265b3a95b17e9387ad9ca4dec529bd97d71.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jquery.simple-text-rotator.min.self-155eb5c89880d9d664e6e370c26b496d142af3ff19b303890a9acf123ec21ab9.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/et-line-font.css" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/font-awesome.css" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/vertical.css" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/isotope.pkgd.min.self-2be7db05ce822c61835faf751bf5501560e4499aa25a85e0de5b9fd7bcffafec.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/imagesloaded.pkgd.self-32d23bbef22388dbb8efa771c635f2f8d08bf06eecadbe75b8f1e3f14d040ca4.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jquery.flexslider-min.self-c086dc28a869d49a81c1149fd9487efbe9cf97feb188aa0e3a5b7d5ec74fe023.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jquery.magnific-popup.min.self-0314d9eb5ae2125fea6814068956c18547aa71ce80e3cce393afcd9bd25dd35f.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/wow.min.self-528629d079c4d7618eceff35184fd78ff20e99f1a2af8c1018b987f48ab7978a.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/custom.self-7ea95d75a006fab497b0b6ec3e743e02d34cb9ebacf341efa6dcf80faef37706.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/commissioners.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/due.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/dues.self-3afaf0c1f18b3a04bf972695ac309ff2abcc20a9c4932543eac5d6e8c3e32205.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/assets/application.self-c900c37a1d8f83300de810726e5e4e681d3a684e498e4d1cac090e9c1906e9e4.js?body=1" for ::1 at 2016-06-08 11:31:37 -0400
+
+
+Started GET "/leagues/email/4" for ::1 at 2016-06-08 11:31:44 -0400
+Processing by LeaguesController#write_email as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mCommissioner Load (0.3ms)[0m  [1mSELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mLeague Load (0.3ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  Rendered leagues/_write_email.html.erb (1.2ms)
+  Rendered leagues/write_email.js.erb (3.4ms)
+Completed 200 OK in 398ms (Views: 9.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leagues/4/back" for ::1 at 2016-06-08 11:31:46 -0400
+Processing by LeaguesController#back as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mCommissioner Load (0.3ms)[0m  [1mSELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mLeague Load (0.5ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mDue Load (0.3ms)[0m  [1mSELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1  [["league_id", 4]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered leagues/_show.html.erb (5.6ms)
+  Rendered leagues/back.js.erb (8.4ms)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/leagues/4/managers" for ::1 at 2016-06-08 11:31:49 -0400
+Processing by ManagersController#index as JS
+  Parameters: {"league_id"=>"4"}
+  [1m[36mCommissioner Load (0.4ms)[0m  [1mSELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mLeague Load (0.3ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1  [["league_id", 4]]
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT "managers".* FROM "managers" WHERE "managers"."league_id" = $1[0m  [["league_id", 4]]
+  Rendered managers/_managers.html.erb (15.8ms)
+  Rendered managers/_index.html.erb (20.6ms)
+  Rendered managers/index.js.erb (24.6ms)
+Completed 200 OK in 378ms (Views: 36.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/leagues/4/finances" for ::1 at 2016-06-08 11:31:51 -0400
+Processing by LeaguesController#get_finances as JS
+  Parameters: {"id"=>"4"}
+  [1m[35mCommissioner Load (0.3ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mManager Load (0.3ms)[0m  SELECT "managers".* FROM "managers" WHERE "managers"."league_id" = $1  [["league_id", 4]]
+  [1m[36mDue Load (0.2ms)[0m  [1mSELECT  "dues".* FROM "dues" WHERE "dues"."manager_id" = $1 LIMIT 1[0m  [["manager_id", 15]]
+  [1m[35mDue Load (0.2ms)[0m  SELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1  [["commissioner_id", 4]]
+  Rendered leagues/_finances.html.erb (6.8ms)
+  Rendered leagues/get_finances.js.erb (9.7ms)
+Completed 200 OK in 1002ms (Views: 13.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/leagues/4/managers/new" for ::1 at 2016-06-08 11:31:54 -0400
+Processing by ManagersController#new as JS
+  Parameters: {"league_id"=>"4"}
+  [1m[36mCommissioner Load (0.3ms)[0m  [1mSELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mLeague Load (0.3ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  Rendered managers/_new.html.erb (11.0ms)
+  Rendered managers/new.js.erb (13.7ms)
+Completed 200 OK in 365ms (Views: 19.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/leagues/4/back" for ::1 at 2016-06-08 11:31:55 -0400
+Processing by LeaguesController#back as JS
+  Parameters: {"id"=>"4"}
+  [1m[35mCommissioner Load (1.9ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mDue Load (0.4ms)[0m  SELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1  [["commissioner_id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1[0m  [["league_id", 4]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered leagues/_show.html.erb (4.6ms)
+  Rendered leagues/back.js.erb (6.9ms)
+Completed 200 OK in 17ms (Views: 10.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/leagues/email/4" for ::1 at 2016-06-08 11:31:57 -0400
+Processing by LeaguesController#write_email as JS
+  Parameters: {"id"=>"4"}
+  [1m[35mCommissioner Load (0.2ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  Rendered leagues/_write_email.html.erb (0.4ms)
+  Rendered leagues/write_email.js.erb (2.1ms)
+Completed 200 OK in 338ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/leagues/4/back" for ::1 at 2016-06-08 11:31:58 -0400
+Processing by LeaguesController#back as JS
+  Parameters: {"id"=>"4"}
+  [1m[35mCommissioner Load (0.3ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mDue Load (0.3ms)[0m  SELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1  [["commissioner_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1[0m  [["league_id", 4]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered leagues/_show.html.erb (3.7ms)
+  Rendered leagues/back.js.erb (5.5ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/leagues/4/dues" for ::1 at 2016-06-08 11:32:01 -0400
+Processing by DuesController#index as HTML
+  Parameters: {"league_id"=>"4"}
+  [1m[35mCommissioner Load (0.3ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  Rendered leagues/_dashboard_jumbotron.html.erb (1.0ms)
+  [1m[36mDue Load (0.4ms)[0m  [1mSELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1  [["league_id", 4]]
+  [1m[36mDue Load (0.2ms)[0m  [1mSELECT "dues".* FROM "dues" WHERE "dues"."league_id" = $1[0m  [["league_id", 4]]
+  Rendered dues/_pot.html.erb (5.2ms)
+  Rendered dues/_index.html.erb (7.1ms)
+  Rendered dues/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 1271ms (Views: 195.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/et-line-font.css" for ::1 at 2016-06-08 11:32:03 -0400
+
+
+Started GET "/assets/font-awesome.css" for ::1 at 2016-06-08 11:32:03 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2016-06-08 11:32:03 -0400
+
+
+Started GET "/assets/vertical.css" for ::1 at 2016-06-08 11:32:03 -0400
+
+
+Started GET "/leagues/4" for ::1 at 2016-06-08 11:32:06 -0400
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCommissioner Load (0.2ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  Rendered leagues/_dashboard_jumbotron.html.erb (1.5ms)
+  [1m[36mDue Load (0.3ms)[0m  [1mSELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1  [["league_id", 4]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered leagues/_show.html.erb (5.5ms)
+  Rendered leagues/show.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 607ms (Views: 144.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/et-line-font.css" for ::1 at 2016-06-08 11:32:06 -0400
+
+
+Started GET "/assets/font-awesome.css" for ::1 at 2016-06-08 11:32:07 -0400
+
+
+Started GET "/assets/vertical.css" for ::1 at 2016-06-08 11:32:07 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2016-06-08 11:32:07 -0400
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.3.0" for ::1 at 2016-06-08 11:32:07 -0400
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.8ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (109.9ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (207.2ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff?v=4.3.0" for ::1 at 2016-06-08 11:32:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.1ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (130.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (3.7ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.9ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (132.2ms)
+
+
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.3.0" for ::1 at 2016-06-08 11:32:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/flatironschool/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.5ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.0ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.0ms)
+
+
+Started GET "/headlines" for ::1 at 2016-06-08 11:32:09 -0400
+Processing by HeadlinesController#index as HTML
+  [1m[36mCommissioner Load (0.3ms)[0m  [1mSELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mLeague Load (0.2ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  Rendered leagues/_dashboard_jumbotron.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered headlines/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2172ms (Views: 135.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/et-line-font.css" for ::1 at 2016-06-08 11:32:11 -0400
+
+
+Started GET "/assets/font-awesome.css" for ::1 at 2016-06-08 11:32:11 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2016-06-08 11:32:11 -0400
+
+
+Started GET "/assets/vertical.css" for ::1 at 2016-06-08 11:32:11 -0400
+
+
+Started GET "/leagues/4" for ::1 at 2016-06-08 11:32:15 -0400
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCommissioner Load (0.2ms)[0m  SELECT  "commissioners".* FROM "commissioners" WHERE "commissioners"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."commissioner_id" = $1  ORDER BY "leagues"."id" ASC LIMIT 1  [["commissioner_id", 4]]
+  Rendered leagues/_dashboard_jumbotron.html.erb (1.4ms)
+  [1m[36mDue Load (0.3ms)[0m  [1mSELECT  "dues".* FROM "dues" WHERE "dues"."commissioner_id" = $1 LIMIT 1[0m  [["commissioner_id", 4]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "managers" WHERE "managers"."league_id" = $1  [["league_id", 4]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered leagues/_show.html.erb (4.8ms)
+  Rendered leagues/show.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 548ms (Views: 147.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/et-line-font.css" for ::1 at 2016-06-08 11:32:15 -0400
+
+
+Started GET "/assets/slider.css" for ::1 at 2016-06-08 11:32:15 -0400
+
+
+Started GET "/assets/font-awesome.css" for ::1 at 2016-06-08 11:32:15 -0400
+
+
+Started GET "/assets/vertical.css" for ::1 at 2016-06-08 11:32:15 -0400
