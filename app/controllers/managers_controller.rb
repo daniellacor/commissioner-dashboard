@@ -16,6 +16,7 @@ class ManagersController < ApplicationController
   def send_text
     @manager = Manager.find_by(id: params[:id])
     number = @manager.phone_number
+    @message = params[:message]
     twilio_token = ENV["TWILIO_TOKEN"]
     twilio_sid = ENV["TWILIO_SID"]
     twilio_phone_number = ENV["TWILIO_PHONE_NUMBER"]
@@ -24,7 +25,7 @@ class ManagersController < ApplicationController
     @twilio_client.messages.create(
       :from => "+1#{twilio_phone_number}",
       :to => number,
-      :body => "This is my 2nd message. It gets sent to #{number}, and I still love cheese"
+      :body => "#{@message}"
     )
     respond_to do |format|
       format.js
