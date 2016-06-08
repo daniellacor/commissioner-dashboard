@@ -1,0 +1,11 @@
+<div class="work-details">
+<h2 class="work-details-title font-alt">League Finances</h2>
+<ul id="finances">
+  <% if @league.commissioner.due.amount %>
+  <h4><li class="font-inc">League Pot: $<%= (@league.managers.count + 1) * (@league.commissioner.due.amount) %></h4>
+  <h4><li class="font-inc">Total Collected: $<%= @league.amount_paid %></h4>
+  <h4><li class="font-inc">Buy In: $<%= @league.commissioner.due.amount %></h4>
+  <% else %>
+  <h4><li class="font-inc">No Dues Set</h4>
+  <% end %>
+</ul>

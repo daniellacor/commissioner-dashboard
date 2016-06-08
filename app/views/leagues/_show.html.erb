@@ -22,16 +22,44 @@
     <ul id="works-grid" class="works-grid works-grid-gut works-grid-3 works-hover-w">
 
       <!-- PORTFOLIO ITEM -->
+      <% if !@league.commissioner.due %>
+      <li class="work-item finance">
+         <%= link_to new_league_due_path(@league) do %>
+          <div class="work-image">
+            <img id = "tile" src="https://pbs.twimg.com/media/CBOuWhBUkAENRiA.jpg" alt="">
+          </div>
+          <div class="work-caption">
+            <h3 class="work-title font-alt">Set League Dues</h3>
+            <div class="work-descr font-inc">
+              Set the Dues Amount for League Managers
+            </div>
+          </div>
+        <% end %>
+      </li>
+      <% end %>
+      <!-- /PORTFOLIO ITEM -->
+
+      <!-- PORTFOLIO ITEM -->
       <li class="work-item manager">
         <%= link_to league_managers_path(@league), remote: true do %>
           <div class="work-image">
             <img id="tile" src="https://pbs.twimg.com/media/CBZIQHHWgAAIBk0.jpg:large" alt="">
           </div>
           <div class="work-caption">
-            <h3 class="work-title font-alt">View Managers</h3>
+            <h3 class="work-title font-alt">
+              <% if @league.managers.count == 0 %>
+              Add Managers
+              </h3>
             <div class="work-descr font-inc">
-              See a list of all the mangers in <%= @league.name %>
+              Add managers to <%= @league.name %>
             </div>
+            <% else %>
+            View Managers
+            </h3>
+          <div class="work-descr font-inc">
+            Edit, Delete, and communicate with managers in <%= @league.name %>
+          </div>
+          <% end %>
           </div>
         <% end %>
       </li>
@@ -99,22 +127,6 @@
           </div>
         </a>
         <% end %>
-      </li>
-      <!-- /PORTFOLIO ITEM -->
-
-      <!-- PORTFOLIO ITEM -->
-      <li class="work-item finance">
-        <a href="portfolio-single-1.html">
-          <div class="work-image">
-            <img id = "tile" src="https://pbs.twimg.com/media/CBOuWhBUkAENRiA.jpg" alt="">
-          </div>
-          <div class="work-caption">
-            <h3 class="work-title font-alt">Set League Dues</h3>
-            <div class="work-descr font-inc">
-              Set the Dues Amount for League Managers
-            </div>
-          </div>
-        </a>
       </li>
       <!-- /PORTFOLIO ITEM -->
 
