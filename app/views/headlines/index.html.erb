@@ -24,7 +24,11 @@
          </div>
 
          <div class="col-sm-6">
-
+           <h3 class="work-details-title font-alt">Injury Report</h3>
+            <% @injuries.uniq.each do |player| %>
+              <%= player %><br>
+            <% end %>
+           </div>
 
        </div>
 
