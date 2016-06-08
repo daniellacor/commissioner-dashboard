@@ -9,6 +9,9 @@ class LeaguesController < ApplicationController
     @managers = current_user.leagues.first.managers
     @league = current_user.leagues.first
     @headlines = Headlines.get_headlines
+    respond_to do |format|
+      format.js
+    end
   end
 
   def send_email

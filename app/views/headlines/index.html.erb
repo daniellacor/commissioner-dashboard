@@ -17,9 +17,10 @@
              <h3 class="work-details-title font-alt">NFL NEWS</h3>
               <p><strong>Today's Bleacher Report</strong></p>
               <% @headlines.each do |title, link| %>
-                <%= link_to title, link %><br>
+                <%= link_to title, link, :target => '_blank' %><br>
               <% end %>
            </div>
+           <%= link_to 'Email to League', headlines_path, class: "btn btn-d btn-circle btn-lg" %>
          </div>
 
          <div class="col-sm-6">

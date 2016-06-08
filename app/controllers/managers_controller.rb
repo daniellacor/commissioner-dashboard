@@ -3,6 +3,9 @@ class ManagersController < ApplicationController
     @league = current_user.leagues.first
     @managers = current_user.leagues.first.managers
     @headlines = Headlines.get_headlines
+    respond_to do |format|
+      format.js
+    end
   end
 
   def write_text
@@ -33,9 +36,13 @@ class ManagersController < ApplicationController
   end
 
   def new
+    @managers = current_user.leagues.first.managers
     @league = current_user.leagues.first
     @manager = Manager.new
     @headlines = Headlines.get_headlines
+    respond_to do |format|
+      format.js
+    end
   end
 
   def edit
@@ -95,6 +102,7 @@ class ManagersController < ApplicationController
   end
 
   def create
+    @managers = current_user.leagues.first.managers
     @manager = Manager.new(manager_params)
     if manager_params["name"].blank? || manager_params["email"].blank? || manager_params["phone_number"].blank?
     flash[:danger] = "You were missing attributes for manager"
