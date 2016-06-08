@@ -1,0 +1,34 @@
+<section class="module-small p-t-20 p-b-60">
+
+<div class="container">
+
+  <!-- PORTFOLIO FILTER -->
+  <div class="row">
+    <div class="col-sm-12">
+
+      <ul id="filters" class="filter font-inc hidden-xs">
+        <li><%= link_to 'Manage Payments', new_league_manager_path(@league), remote: true %></li>
+        <li><%= link_to 'Text Non-Payers', league_finances_path(@league), remote: true %></li>
+      </ul>
+
+    </div>
+  </div>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-6" id="main-panel">
+
+
+   <%= render partial: "dues/pot" %>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6" id="side-panel">
+
+  </div>
+
+</div>
+
+</section>
