@@ -7,27 +7,24 @@
          <div class="col-sm-6">
            <div class="work-details">
              <h2 class="work-details-title font-alt">Schedule Draft</h2>
-             <table id='calendar'>
-              <tr>
-                <th>Sunday|</th><th>Monday|</th>
-                <th>Tuesday|</th><th>Wednesday|</th>
-                <th>Thursday|</th><th>Friday|</th>
-                <th>Saturday|</th>
-               </tr>
-               <tr>
-               <h3>June</h3>
-               <% @beginning_of_month = Date.civil(2016, 06, 1) %>
-               <% @end_of_month = Date.civil(2016, 06, -1) %>
-
-               <% (@beginning_of_month..@end_of_month).each do |d| %>
-                 <% if d == @beginning_of_month %>
-                   <% d.wday.times do %> <td class='offset'></td> <% end %>
+             <div class="col-md-12 text-center">
+               <div class="well controls">
+                 <%= link_to drafts_path(date: @date - 1.month), class: "btn btn-default" do %>
+                   <i class="glyphicon glyphicon-backward"></i>
                  <% end %>
-                 <% if d.wday == 0 %> </tr><tr> <% end %>
-                 <td> <%= d.day %> </td>
+                 <%= "#{@date.strftime("%B")} #{@date.year}" %>
+                 <%= link_to drafts_path(date: @date + 1.month), class: "btn btn-default" do %>
+                   <i class="glyphicon glyphicon-forward"></i>
+                 <% end %>
+               </div>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-md-12">
+               <%= calendar @date do |date| %>
+                 <%= date.day %>
                <% end %>
-               </tr>
-             </table>
+             </div>
            </div>
          </div>
      </div>
