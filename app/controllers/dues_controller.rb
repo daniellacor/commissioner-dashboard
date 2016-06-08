@@ -46,9 +46,14 @@ class DuesController < ApplicationController
   end
 
   def pay
+    @league = current_user.leagues.first
+    @managers = current_user.leagues.first.managers
     @due = Due.find_by(id: params[:id])
     @due.paid = true
-    head :ok
+    @due.save
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
