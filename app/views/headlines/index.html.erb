@@ -17,7 +17,11 @@
              <h3 class="work-details-title font-alt">NFL NEWS</h3>
               <p><strong>Today's Bleacher Report</strong></p>
               <% @headlines.each do |title, link| %>
+
+                <% if title != '' %>
                 <%= link_to title, link, :target => '_blank' %><br>
+              <% end %>
+
               <% end %>
            </div>
            <%= link_to 'Email to League', headlines_path, class: "btn btn-d btn-circle btn-lg" %>
@@ -25,9 +29,12 @@
 
          <div class="col-sm-6">
            <h3 class="work-details-title font-alt">Injury Report</h3>
-            <% @injuries.uniq.each do |player| %>
-              <%= player %><br>
-            <% end %>
+             <% @injur_stat.each do |player, status| %>
+             <% if player != "Comment:"  %>
+               <strong><%= player %></strong>&emsp;Status:  <%=  status%><br>
+               <% end  %>
+             <% end %>
+
            </div>
 
        </div>
