@@ -7,7 +7,10 @@ class HeadlinesController < ApplicationController
     doc_ir = Nokogiri::HTML(open("http://espn.go.com/nfl/injuries"))
 
     @headlines = {}
-    @injuries = []
+    # @injuries = []
+    # @statuses = []
+
+    @injur_stat = {}
 
     doc.css('ol a')[1..30].each do |headline|
       link = headline.attribute('href').value
@@ -15,11 +18,25 @@ class HeadlinesController < ApplicationController
       @headlines[title] = link
     end
 
+    # doc_ir.css('.tablehead .oddrow')[0..100].each do |player|
+    #   injured = player.children.children.children.text
+    #   @injuries << injured
+    # end
+    #
+    # doc_ir.css('.tablehead .oddrow')[0..100].each do |player|
+    #   status = player.children.children[2]
+    #   @statuses << status
+    # end
 
-    doc_ir.css('.tablehead td')[1..100].each do |player|
-      player = player.text
-      @injuries << player
+    doc_ir.css('.tablehead .oddrow')[0..100].each do |player|
+      injured = player.children.children.children.text
+      status = player.children.children[2]
+      @injur_stat[injured] = status
     end
+
+
+
+
 
 
   end
