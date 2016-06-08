@@ -7,19 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-justin = Commissioner.create(name: "Justin", email: "j@flatiron.com", password: "asdf", phone_number: "555-555-5555")
-daniella = Commissioner.create(name: "Daniella", email: "d@flatiron.com", password: "asdf", phone_number: "666-666-6666")
+justin = Commissioner.create(name: "Justin", email: "j@flatiron.com", password: "asdf", phone_number: "5555555555")
+daniella = Commissioner.create(name: "Daniella", email: "d@flatiron.com", password: "asdf", phone_number: "6666666666")
 
 j_league = League.create(name: "J's League", commissioner_id: 1)
 d_league = League.create(name: "D's League", commissioner_id: 2)
 
-first_manager = Manager.create(name: "Bob", email: "bob@bob.com", phone_number: "333-333-3333", league_id: 1)
-second_manager = Manager.create(name: "George", email: "george@george.com", phone_number: "222-222-2222", league_id: 1)
-third_manager = Manager.create(name: "Jim", email: "jim@jim.com", phone_number: "111-111-1111", league_id: 1)
+first_manager = Manager.create(name: "Bob", email: "bob@bob.com", phone_number: "3333333333", league_id: 1)
+second_manager = Manager.create(name: "George", email: "george@george.com", phone_number: "2222222222", league_id: 1)
+third_manager = Manager.create(name: "Jim", email: "jim@jim.com", phone_number: "1111111111", league_id: 1)
 
-another_manager = Manager.create(name: "Lauren", email: "lauren@lauren.com", phone_number: "333-333-3333", league_id: 2)
-other_manager = Manager.create(name: "Veronica", email: "veronica@veronica.com", phone_number: "222-222-2222", league_id: 2)
-again_manager = Manager.create(name: "Maureen", email: "maureen@maureen.com", phone_number: "111-111-1111", league_id: 2)
+another_manager = Manager.create(name: "Lauren", email: "lauren@lauren.com", phone_number: "3333333333", league_id: 2)
+other_manager = Manager.create(name: "Veronica", email: "veronica@veronica.com", phone_number: "2222222222", league_id: 2)
+again_manager = Manager.create(name: "Maureen", email: "maureen@maureen.com", phone_number: "1111111111", league_id: 2)
 
 j_due = Due.create(commissioner_id: 1, league_id: 1, amount: 25)
 d_due = Due.create(commissioner_id: 2, league_id: 2, amount: 25)

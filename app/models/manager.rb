@@ -3,6 +3,6 @@ class Manager < ActiveRecord::Base
   belongs_to :league
   has_one :due
 
-  #validates_format_of :phone_number, :with =>  /\d[0-9]\)*\z/ , :message => "Please enter a valid phone number"
+  validates_format_of :phone_number, :with =>  /\d[0-9]\)*\z/ , :message => "Please enter a valid phone number"
 
 end
