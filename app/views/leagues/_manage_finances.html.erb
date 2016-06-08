@@ -1,0 +1,19 @@
+<div class="work-details">
+  <h2 class="work-details-title font-alt">Manage Payments</h2>
+  <% @managers.each do |manager| %>
+      <% if !manager.due.paid %>
+        <h4 class="font-inc"><strong><%= manager.name %></strong> owes $<%= manager.due.amount %></span>
+        <%= link_to 'Unpaid', pay_path(manager.due), class: "btn btn-border-d btn-circle", remote: true %>
+        <% else %>
+        <h4 class="font-inc"><strong><%= manager.name %></strong> has paid</span>
+        <%= link_to 'Paid', pay_path(manager.due), class: "btn btn-d btn-circle", remote: true %>
+      <% end %>
+    <% end %>
+      <% if !@league.commissioner.due.paid %>
+      <h4 class="font-inc"><strong>You</strong> owe $<%= @league.commissioner.due.amount %></span>
+      <%= link_to 'Unpaid', pay_path(@league.commissioner.due), class: "btn btn-border-d btn-circle", remote: true  %>
+      <% else %>
+      <h4 class="font-inc"><strong>You</strong> have paid</span>
+      <%= link_to 'Paid', pay_path(@league.commissioner.due), class: "btn btn-d btn-circle", remote: true  %>
+      <% end %><br>
+</div>

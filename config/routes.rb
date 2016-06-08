@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     resources :dues
     resources :managers
   end
+
   get '/leagues/:id/finances' => 'leagues#get_finances', as: 'league_finances'
+  get '/leagues/:id/manage_finances' => 'leagues#manage_finances', as: "manage_finances"
   get '/leagues/:id/back' => 'leagues#back', as: 'league_back'
   get '/managers/text/:id' => 'managers#write_text', as: 'write_text'
   post '/managers/text/:id' => 'managers#send_text', as: 'send_text'
@@ -25,7 +27,9 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-  post '/dues/pay/:id' => 'dues#pay'
+  get '/dues/pay/:id' => 'dues#pay', as: 'pay'
+  get '/leagues/:id/dues_text' => 'dues#write_text', as: 'dues_text'
+  post '/leagues/:id/dues_text' => 'dues#text_non_payers', as: 'send_dues_text'
 
 
 

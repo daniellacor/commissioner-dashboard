@@ -1,0 +1,4 @@
+$("#main-panel").html("")
+$("#main-panel").append("<%= j render :partial => 'dues/pot', locals: {league: @league}%>").hide().fadeIn()
+$("#side-panel").html("")
+$("#side-panel").append("<%= j render :partial => 'leagues/manage_finances', locals: {league: @league} %>").hide().fadeIn()

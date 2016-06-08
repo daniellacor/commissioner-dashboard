@@ -14,6 +14,16 @@ class LeaguesController < ApplicationController
     end
   end
 
+  def manage_finances
+    @dues = current_user.leagues.first.dues
+    @managers = current_user.leagues.first.managers
+    @league = current_user.leagues.first
+    @headlines = Headlines.get_headlines
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def back
     @league = current_user.leagues.first
     @commissioner = current_user
