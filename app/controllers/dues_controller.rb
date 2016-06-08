@@ -7,6 +7,32 @@ class DuesController < ApplicationController
     @headlines = Headlines.get_headlines
   end
 
+  def write_text
+    @league = current_user.leagues.first
+  respond_to do |format|
+    format.js
+  end
+  end
+
+  def text_non_payers
+    @managers = current_user.leagues.first.managers.select {|manager| !manager.due.paid}
+    @message = params[:message]
+    twilio_token = ENV["TWILIO_TOKEN"]
+    twilio_sid = ENV["TWILIO_SID"]
+    twilio_phone_number = ENV["TWILIO_PHONE_NUMBER"]
+    @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+    @managers.each do |manager|
+    @twilio_client.messages.create(
+      :from => "+1#{twilio_phone_number}",
+      :to => manager.phone_number,
+      :body => "#{@message}"
+    )
+    end
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def new
     @due = Due.new
     @league = current_user.leagues.first

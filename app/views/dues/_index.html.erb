@@ -8,7 +8,7 @@
 
       <ul class="filter font-inc hidden-xs">
         <li><%= link_to 'Manage Payments', manage_finances_path(@league), remote: true %></li>
-        <li><%= link_to 'Text Non-Payers', league_finances_path(@league), remote: true %></li>
+        <li><%= link_to 'Text Non-Payers', dues_text_path(@league), remote: true %></li>
       </ul>
 
     </div>

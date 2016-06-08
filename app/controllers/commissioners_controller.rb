@@ -21,7 +21,6 @@ class CommissionersController < ApplicationController
     else
       string = ""
       @commissioner.errors.full_messages.each {|error| string << "#{error}.<br>"}
-      render "new"
     end
   end
 

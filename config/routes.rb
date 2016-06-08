@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get '/dues/pay/:id' => 'dues#pay', as: 'pay'
+  get '/leagues/:id/dues_text' => 'dues#write_text', as: 'dues_text'
+  post '/leagues/:id/dues_text' => 'dues#text_non_payers', as: 'send_dues_text'
 
 
 
