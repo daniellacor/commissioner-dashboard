@@ -3,16 +3,16 @@
     <div class="row">
     <h4 class="font-alt m-t-0 m-b-0">Log-In</h4>
     <hr class="divider-w m-t-10 m-b-20">
-
+    <div id="log-in">
     <%= form_tag 'login' do %>
-        <%= label_tag :email %>
+        <%= label_tag :email %><br>
         <%= text_field_tag :email %><br>
-        <%= label_tag :password %>
+        <%= label_tag :password %><br>
         <%= password_field_tag :password %><br>
-        <%= submit_tag 'Sign In', class: "btn btn-g btn-circle btn-lg" %><br>
+        <%= submit_tag 'Sign In', class: "btn btn-g btn-circle btn-lg" %>
         <%= link_to 'Back', homescreen_path, class: "btn btn-g btn-circle btn-lg", remote: true %>
     <% end %>
-
+  </div>
     </div>
   </div>
 </div>

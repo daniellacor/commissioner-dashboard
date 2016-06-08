@@ -21,7 +21,7 @@ class CommissionersController < ApplicationController
     else
       string = ""
       @commissioner.errors.full_messages.each {|error| string << "#{error}.<br>"}
-      render "new"
+      redirect_to root_path
     end
   end
 
