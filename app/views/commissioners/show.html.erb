@@ -45,7 +45,8 @@
 
     <div class="module-title font-alt align-center">
         <%= current_user.email %><br>
-        <%= current_user.phone_number %><br>
+        <%= current_user.phone_number.insert(3, '-').insert(7, '-') %><br>
+
     <div><br>
     <div class="btn btn-g btn-circle btn-lg">
         <%= link_to "EDIT ACCOUNT", edit_commissioner_path(@commissioner) %>
