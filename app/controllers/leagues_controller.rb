@@ -14,6 +14,25 @@ class LeaguesController < ApplicationController
     end
   end
 
+  def back
+    @league = current_user.leagues.first
+    @commissioner = current_user
+    @managers = @league.managers
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def get_finances
+    @dues = current_user.leagues.first.dues
+    @managers = current_user.leagues.first.managers
+    @league = current_user.leagues.first
+    @headlines = Headlines.get_headlines
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def send_email
     @league = League.find_by(id: params[:id])
     @managers = @league.managers

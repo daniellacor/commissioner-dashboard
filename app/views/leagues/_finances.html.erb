@@ -1,0 +1,9 @@
+  <div class="work-details">
+    <h2 class="work-details-title font-alt">Manage Payments</h2>
+    <% @managers.each do |manager| %>
+      <h3 class="manager-paid"><%= manager.name %>
+        <% if manager.due.paid %>
+          <% else %> <span class="manager-due" id="<%=manager.id%>">$<%= manager.due.amount %></span><button class="btn btn-g btn-circle btn-sm paid-btn" id="<%=manager.id%>">paid</button>
+        <% end %><br>
+    <% end %><h3>
+  </div>
